@@ -129,8 +129,7 @@ section,article{scroll-margin-top:72px}
 .grp h3{font-family:var(--sans);font-weight:600;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:8px 0 4px}
 .row{display:flex;align-items:baseline;gap:8px;padding:10px 4px;border-radius:8px}
 .row:hover{background:var(--bg)}
-.nm{display:flex;flex-direction:column;font-size:15px}
-.nm small{font-size:12.5px;color:var(--muted);line-height:1.35}
+.nm{font-size:15px}
 .lead-dots{flex:1;border-bottom:1.5px dotted rgba(210,176,111,.5);transform:translateY(-5px);min-width:16px}
 .pr{white-space:nowrap;font-family:var(--serif);font-size:19px;color:var(--gold2)}
 .pr span{font-family:var(--sans);font-size:11px;color:var(--muted);margin-right:4px;letter-spacing:.06em}
@@ -469,11 +468,11 @@ const SITE = {
   ],
   priceList: [
     { group: "Lips", items: [
-      { name: "Lip blush", note: "Mineral pigments", price: "1,800", msg: "Hi! I want to book lip blush" } ] },
+      { name: "Lip blush", price: "1,800", msg: "Hi! I want to book lip blush" } ] },
     { group: "Brows", items: [
-      { name: "Microblading cover-up", note: "Old or discoloured brows · about 1 hour", price: "1,800", msg: "Hi! I want to book cover up microblading" },
-      { name: "New microblading", note: "Lasts 1 to 1.5 years", price: "1,350", msg: "Hi! I want to book new microblading" },
-      { name: "Nanoblading", note: "Ultra-fine strokes, ideal for first-timers", price: "1,350", msg: "Hi! I want to book nanoblading" },
+      { name: "Microblading cover-up", price: "1,800", msg: "Hi! I want to book cover up microblading" },
+      { name: "New microblading", price: "1,350", msg: "Hi! I want to book new microblading" },
+      { name: "Nanoblading", price: "1,350", msg: "Hi! I want to book nanoblading" },
       { name: "Powder brows", price: "2,000", msg: "Hi! I want to book powder brows" },
       { name: "Brow lamination", price: "350", msg: "Hi! I want to book brow lamination" },
       { name: "Brow shaping", price: "100", msg: "Hi! I want to book brow shaping" },
@@ -519,7 +518,7 @@ document.getElementById("categories").innerHTML = SITE.categories.map((c, i) =>
 /* price list */
 document.getElementById("price-cols").innerHTML = SITE.priceList.map(g =>
   '<div class="grp"><h3>' + g.group + '</h3>' + g.items.map(it =>
-    '<a class="row" href="' + wa(it.msg) + '" target="_blank" rel="noopener"><span class="nm">' + it.name + (it.note ? '<small>' + it.note + '</small>' : '') + '</span><i class="lead-dots" aria-hidden="true"></i><span class="pr"><span>AED</span>' + it.price + '</span></a>').join("") + '</div>').join("");
+    '<a class="row" href="' + wa(it.msg) + '" target="_blank" rel="noopener"><span class="nm">' + it.name + '</span><i class="lead-dots" aria-hidden="true"></i><span class="pr"><span>AED</span>' + it.price + '</span></a>').join("") + '</div>').join("");
 document.getElementById("price-note").textContent = SITE.priceNote;
 
 /* reviews */
