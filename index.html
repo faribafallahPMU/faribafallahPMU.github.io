@@ -63,7 +63,7 @@ section,article{scroll-margin-top:72px}
 /* highlights */
 .stats{background:var(--bg2);border-block:1px solid var(--line)}
 .stats .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));text-align:center;padding:22px 0}
-.stat b{display:block;font-family:var(--serif);font-size:30px;font-weight:400;color:var(--gold2);line-height:1.1}
+.stat b{display:block;font-family:var(--serif);font-size:clamp(24px,7vw,30px);white-space:nowrap;font-weight:400;color:var(--gold2);line-height:1.1}
 .stat span{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 
 /* about */
@@ -389,7 +389,7 @@ const SITE = {
   facts: [
     { big: "7", label: "Years of experience" },
     { big: "1–1.5", label: "Years the results last" },
-    { big: "Mon–Sat", label: "10:00 – 19:00" }
+    { big: "10–19", label: "Monday to Saturday" }
   ],
   // Real client reviews. Empty = the whole reviews section is hidden. Format: { name: "Sarah M.", text: "…", source: "Instagram" }
   reviews: [],
