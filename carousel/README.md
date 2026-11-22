@@ -24,6 +24,7 @@ order, from 1 up. That is the whole rule.
 | `lamination` | Brow lamination & shaping |
 | `lash-line-upper` | Lash line, upper (its photos show the label "Upper lash line") |
 | `lash-line-lower` | Lash line, lower (label "Lower lash line") |
+| `lash-line-both` | Lash line, upper and lower on the same eye (label "Upper & lower") |
 | `lash-lift` | Lash lift |
 | `beauty-spot` | Beauty spot |
 
