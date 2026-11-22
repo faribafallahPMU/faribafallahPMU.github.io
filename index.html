@@ -4,10 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Fariba Fallah · Permanent Makeup Artist in Dubai</title>
-<meta name="description" content="Fariba Fallah – refined permanent makeup: microblading, powder brows, lip blush and cover-ups in a private studio. Services, prices, reviews and WhatsApp booking.">
+<meta name="description" content="Fariba Fallah – permanent makeup artist in Dubai Media City: microblading, nano brows, lip blush, lash line and expert cover-ups of old brows. Appointments on WhatsApp.">
 <meta name="theme-color" content="#0e0d0c">
 <meta property="og:title" content="Fariba Fallah · Permanent Makeup Artist in Dubai">
-<meta property="og:description" content="Refined beauty, by appointment. Book on WhatsApp.">
+<meta property="og:description" content="Microblading, nano brows, lip blush, lash line and cover-ups in Dubai Media City. Appointments on WhatsApp.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://faribafallahpmu.github.io/">
+<meta property="og:image" content="https://faribafallahpmu.github.io/photos/portrait.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://faribafallahpmu.github.io/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230e0d0c'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-style='italic' text-anchor='middle' fill='%23d2b06f'%3EF%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,6 +38,8 @@ section{scroll-margin-top:66px}
 .btn svg{width:18px;height:18px;flex:none;fill:currentColor}
 .btn-gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1b1507;box-shadow:0 14px 30px -12px rgba(210,176,111,.6)}
 .btn-outline{border:1px solid rgba(210,176,111,.45);color:var(--gold2)}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 14px 30px -12px rgba(37,211,102,.65)}
+.btn-wa:hover{background:#1fbd5b}
 
 /* photo placeholders – replaced by real photos later */
 .ph{position:relative;overflow:hidden;background:linear-gradient(135deg,#2b2622,#1d1a17 55%,#171412);display:grid;place-items:center;color:rgba(236,212,156,.5);aspect-ratio:4/5;border:1px solid rgba(210,176,111,.18)}
@@ -126,7 +133,7 @@ section{scroll-margin-top:66px}
 .box h2{font-size:clamp(38px,9vw,60px);margin:12px 0 14px}
 .box h2 em{font-style:italic;color:var(--gold2)}
 .box p{color:var(--muted);max-width:44ch;margin:0 auto 30px}
-.box .btn-gold{font-size:15px;padding:15px 26px}
+.box .btn-wa{font-size:15px;padding:15px 26px}
 .info{display:grid;gap:26px;margin-top:44px;text-align:center}
 .info svg{width:22px;height:22px;color:var(--gold);margin:0 auto 8px}
 .info b{display:block;font-family:var(--serif);font-size:20px;font-weight:400}
@@ -135,7 +142,8 @@ footer.site{padding:26px 0 120px;text-align:center;color:var(--muted);font-size:
 
 /* floating "Book now" button */
 /* the only persistent booking button: bottom-right, inside the thumb zone and where visitors expect a chat button */
-.fab{position:fixed;right:16px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:60;display:inline-flex;align-items:center;gap:10px;padding:16px 22px;border-radius:999px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1b1507;font-weight:600;font-size:14px;letter-spacing:.04em;box-shadow:0 14px 30px -10px rgba(210,176,111,.6);transition:transform .2s}
+.fab{position:fixed;right:16px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:60;display:inline-flex;align-items:center;gap:10px;padding:16px 22px;border-radius:999px;background:var(--wa);color:#fff;font-weight:600;font-size:14px;letter-spacing:.04em;box-shadow:0 14px 30px -10px rgba(37,211,102,.65);transition:transform .2s,background .2s}
+.fab:hover{background:#1fbd5b}
 .fab:hover{transform:translateY(-2px)}
 .fab svg{width:22px;height:22px;fill:currentColor}
 
@@ -201,9 +209,9 @@ html.js [data-reveal].in{opacity:1;transform:none}
     <div class="hero-text">
       <p class="eyebrow">Permanent Makeup Artist · Dubai</p>
       <h1>Fariba <em>Fallah</em></h1>
-      <p class="lead">Refined permanent makeup in a private studio. Microblading, lip blush and cover-ups, with precision, discretion and results that speak for themselves.</p>
+      <p class="lead">Microblading, nano brows, lip blush and lash line in a private studio in Dubai Media City. Natural, hair-like strokes and expert cover-ups of old brows.</p>
       <div class="cta">
-        <a class="btn btn-gold" data-wa href="#"><svg><use href="#i-wa"/></svg>Book on WhatsApp</a>
+        <a class="btn btn-wa" data-wa href="#"><svg><use href="#i-wa"/></svg>Book on WhatsApp</a>
         <a class="btn btn-outline" href="#services">Services & prices</a>
       </div>
     </div>
@@ -219,13 +227,13 @@ html.js [data-reveal].in{opacity:1;transform:none}
     <div class="corners" data-reveal><img class="ph" src="photos/about-1.jpg" alt="Fariba at work"></div>
     <div data-reveal>
       <p class="eyebrow">About</p>
-      <h2>Beauty, <em>refined.</em></h2>
-      <p>Hello, I'm Fariba, a permanent makeup artist in Dubai Media City. I help women feel confident in their own face with treatments that enhance what is already there rather than hide it.</p>
-      <p>I specialise in microblading, powder brows, lip blush and the cover-up of old tattooed brows. I work one-on-one in a calm, private studio, and every result is drawn on and approved by you before we start.</p>
+      <h2>Meet <em>Fariba</em></h2>
+      <p>I am a permanent makeup artist based in Dubai Media City, specialising in microblading, nano brows, lip blush, lash line and the cover-up of old tattooed brows.</p>
+      <p>Every treatment starts with a consultation. I study your features, draw the shape and agree the colour with you before a single stroke is made, so the result looks natural, balanced and unmistakably yours.</p>
       <ul class="checks">
-        <li>Single-use needles and strict hygiene</li>
-        <li>Consultation and pre-drawing before every treatment</li>
-        <li>Natural results, with full aftercare guidance</li>
+        <li>Private studio, one client at a time, by appointment only</li>
+        <li>Single-use needles, sterile tools and strict hygiene</li>
+        <li>Natural, long-lasting results with full aftercare guidance</li>
       </ul>
     </div>
   </div>
@@ -235,7 +243,6 @@ html.js [data-reveal].in{opacity:1;transform:none}
   <div class="wrap">
     <div class="sec-head" data-reveal>
       <div><p class="eyebrow">Menu</p><h2>Services & prices</h2></div>
-      <p>Swipe to explore · tap a treatment to book it</p>
     </div>
     <div class="track" id="services-track" aria-label="Services"></div>
     <div class="dots" id="services-dots" aria-hidden="true"></div>
@@ -253,7 +260,7 @@ html.js [data-reveal].in{opacity:1;transform:none}
       <li data-reveal><span>02</span><b>Photo check</b><p>I tell you honestly what is possible, which technique suits your skin and confirm the price before you book.</p></li>
       <li data-reveal><span>03</span><b>We book</b><p>Your session in my private studio in Dubai Media City, with free parking and full aftercare guidance.</p></li>
     </ol>
-    <a class="btn btn-gold" data-wa data-wa-msg="Hello Fariba, I would like a cover-up of my old brows. Here is a photo:" href="#"><svg><use href="#i-wa"/></svg>Send a photo on WhatsApp</a>
+    <a class="btn btn-wa" data-wa data-wa-msg="Hello Fariba, I would like a cover-up of my old brows. Here is a photo:" href="#"><svg><use href="#i-wa"/></svg>Send a photo on WhatsApp</a>
   </div>
 </section>
 
@@ -265,9 +272,9 @@ html.js [data-reveal].in{opacity:1;transform:none}
     </div>
     <div class="grid" data-reveal>
       <img class="ph" src="photos/before-after-1.jpg" alt="Before and after: microblading" loading="lazy">
-      <img class="ph" src="photos/before-after-2.jpg" alt="Before and after: powder brows" loading="lazy">
+      <img class="ph" src="photos/before-after-2.jpg" alt="Before and after: nano brows" loading="lazy">
       <img class="ph" src="photos/brows-lips.jpg" alt="Healed brows and lip blush" loading="lazy">
-      <img class="ph" src="photos/lash-lift.jpg" alt="Lash lift" loading="lazy">
+      <img class="ph" src="photos/lash-lift.jpg" alt="Lash line" loading="lazy">
       <img class="ph" src="photos/brow-lamination.jpg" alt="Brow lamination" loading="lazy">
       <img class="ph" src="photos/lash-lift-2.jpg" alt="Lash lift and brow lamination" loading="lazy">
     </div>
@@ -291,10 +298,10 @@ html.js [data-reveal].in{opacity:1;transform:none}
       <p class="eyebrow">Appointments</p>
       <h2>Book your <em>moment</em></h2>
       <p>Send me a message on WhatsApp with the treatment you would like and your preferred day, or a photo of your brows if you are thinking about a cover-up. I reply personally.</p>
-      <a class="btn btn-gold" data-wa href="#"><svg><use href="#i-wa"/></svg>Book on WhatsApp</a>
+      <a class="btn btn-wa" data-wa href="#"><svg><use href="#i-wa"/></svg>Book on WhatsApp</a>
     </div>
     <div class="info">
-      <div data-reveal><svg><use href="#i-pin"/></svg><b>Private studio</b><span>Dubai Media City · free parking · by appointment only</span></div>
+      <div data-reveal><svg><use href="#i-pin"/></svg><b>Dubai Media City</b><span>Private studio · free parking</span></div>
       <div data-reveal><svg><use href="#i-clock"/></svg><b>Appointments</b><span>By appointment only · booking on WhatsApp</span></div>
       <div data-reveal><svg><use href="#i-ig"/></svg><b>Instagram</b><a data-ig href="#"><span data-ig-handle>@fariba.fallahpmu</span></a></div>
     </div>
@@ -309,17 +316,16 @@ html.js [data-reveal].in{opacity:1;transform:none}
 <script>
 /* ========= EDIT YOUR CONTENT HERE ========= */
 const SITE = {
-  whatsapp: "41790000000",            // your number in international format, digits only (no +, no spaces)
+  whatsapp: "971506482550",            // your number in international format, digits only (no +, no spaces)
   whatsappMessage: "Hello Fariba, I would like to book an appointment.",
   instagram: "fariba.fallahpmu",         // your Instagram handle without @
   services: [
     // price: what is shown in gold. duration: shown small next to it, leave "" to hide it.
-    { name: "Microblading", desc: "Hair-stroke brows drawn one by one for a natural, feathered result.", duration: "", price: "price on request", img: "photos/microblading.jpg" },
-    { name: "Powder brows", desc: "Soft, shaded brows with a light makeup finish that suits every skin type.", duration: "", price: "price on request", img: "photos/powder-brows.jpg" },
+    { name: "Microblading", desc: "Natural, hair-like strokes drawn one by one for brows that look like your own.", duration: "", price: "price on request", img: "photos/microblading.jpg" },
+    { name: "Nano brows", desc: "Ultra-fine strokes with a nano needle: soft, precise and suited to every skin type.", duration: "", price: "price on request", img: "photos/powder-brows.jpg" },
     { name: "Lip blush", desc: "A natural tint that defines the lip line and evens out the colour.", duration: "", price: "price on request", img: "photos/lip-blush.jpg" },
-    { name: "Cover-up of old tattoo brows", desc: "Old or faded tattooed brows corrected and covered. No laser, no removal: send a photo first, then we book.", duration: "", price: "1,800 AED", img: "photos/cover-up.jpg", cta: "Send a photo on WhatsApp", msg: "Hello Fariba, I would like a cover-up of my old brows. Here is a photo:" },
-    { name: "Lash lift & tint", desc: "Your own lashes, lifted and tinted for six to eight weeks.", duration: "", price: "price on request", img: "photos/lash-lift.jpg" },
-    { name: "Brow lamination", desc: "Fuller, perfectly set brows with a shape tailored to your face.", duration: "", price: "price on request", img: "photos/brow-lamination.jpg" }
+    { name: "Lash line", desc: "A fine line between the lashes for eyes that look defined and awake, with no makeup.", duration: "", price: "price on request", img: "photos/lash-lift.jpg" },
+    { name: "Cover-up of old tattoo brows", desc: "Old or faded tattooed brows corrected and covered. No laser, no removal: send a photo first, then we book.", duration: "", price: "1,800 AED", img: "photos/cover-up.jpg", cta: "Send a photo on WhatsApp", msg: "Hello Fariba, I would like a cover-up of my old brows. Here is a photo:" }
   ],
   // Highlights row under the main photo. Empty = hidden. Example of the format:
   // facts: [{ big: "8+", label: "Years" }, { big: "1,200+", label: "Happy clients" }, { big: "5.0", label: "Average rating" }],
