@@ -99,6 +99,8 @@ section,article{scroll-margin-top:72px}
 .strip::-webkit-scrollbar{display:none}
 .strip figure{flex:none;height:clamp(260px,64vw,360px);aspect-ratio:4/5;border-radius:14px;overflow:hidden;scroll-snap-align:start;position:relative;background:#000}
 .strip img{width:100%;height:100%;object-fit:cover;display:block}
+.strip figure.ph{background:var(--card);animation:ph 1.4s ease-in-out infinite}
+@keyframes ph{0%,100%{opacity:.45}50%{opacity:1}}
 .strip figcaption{position:absolute;left:10px;bottom:10px;background:rgba(14,13,12,.8);color:var(--gold2);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;padding:5px 10px;border-radius:999px}
 .dots{display:flex;gap:6px;justify-content:center;margin-top:2px}
 .dots i{width:6px;height:6px;border-radius:999px;background:#2f2a26;transition:all .3s}
@@ -250,7 +252,7 @@ html.js [data-reveal].in{opacity:1;transform:none}
 <main id="top">
 <section class="hero">
   <div class="wrap">
-    <div class="photo"><img src="photos/portrait.jpg" alt="Fariba Fallah, permanent makeup artist"></div>
+    <div class="photo"><img src="photos/portrait.jpg" alt="Fariba Fallah, permanent makeup artist" fetchpriority="high"></div>
     <div class="hero-text">
       <p class="eyebrow">Permanent Makeup Artist · Dubai</p>
       <h1>Fariba <em>Fallah</em></h1>
@@ -266,7 +268,7 @@ html.js [data-reveal].in{opacity:1;transform:none}
 
 <section class="about" id="about">
   <div class="wrap">
-    <div class="corners" data-reveal><img src="photos/about-1.jpg" alt="Fariba Fallah at work"></div>
+    <div class="corners" data-reveal><img src="photos/about-1.jpg" alt="Fariba Fallah at work" loading="lazy"></div>
     <div data-reveal>
       <p class="eyebrow">About me</p>
       <h2>Hi, I'm <em>Fariba.</em></h2>
@@ -589,24 +591,27 @@ function carousel(track, dots, every) {
     track.scrollTo({ left: next === undefined ? 0 : Math.min(next, max), behavior: "smooth" });
   }, every);
 }
-/* each carousel shows the photos of its folder: 1.jpg, 2.jpg, 3.jpg ... in that order (add 8.jpg to add a photo) */
+/* each carousel shows the photos of its folder: 1.jpg, 2.jpg, 3.jpg ... in that order (add 8.jpg to add a photo).
+   Eight numbers are checked at the same time and the photos appear as soon as they are found. */
 const exists = url => fetch(url, { method: "HEAD" }).then(r => r.ok).catch(() => false);
-async function photosIn(folder) {
-  const found = [];
-  for (let start = 1; start <= 48; start += 4) {
-    const nums = [start, start + 1, start + 2, start + 3];
-    const ok = await Promise.all(nums.map(n => exists(folder + "/" + n + ".jpg")));
-    nums.forEach((n, k) => { if (ok[k]) found.push(folder + "/" + n + ".jpg"); });
-    if (!ok.some(Boolean)) break;   // four empty numbers in a row: the folder ends here
-  }
-  return found;
-}
 document.querySelectorAll(".strip-wrap[data-folder]").forEach(async wrap => {
-  const files = await photosIn(wrap.dataset.folder);
-  if (!files.length) { wrap.remove(); return; }
-  const strip = wrap.querySelector(".strip");
-  strip.innerHTML = files.map((f, i) => '<figure><img src="' + f + '" alt="' + wrap.dataset.name + ', photo ' + (i + 1) + '" loading="lazy"></figure>').join("");
+  const folder = wrap.dataset.folder, strip = wrap.querySelector(".strip");
+  const fig = (f, i) => '<figure><img src="' + f + '" alt="' + wrap.dataset.name + ', photo ' + (i + 1) + '" loading="lazy"></figure>';
+  strip.innerHTML = '<figure class="ph"></figure>'.repeat(3);   // soft placeholders while the folder is checked
   wrap.hidden = false;
+  let shown = 0;
+  for (let start = 1; start <= 48; start += 8) {
+    const nums = Array.from({ length: 8 }, (_, k) => start + k);
+    const ok = await Promise.all(nums.map(n => exists(folder + "/" + n + ".jpg")));
+    const found = nums.filter((n, k) => ok[k]).map(n => folder + "/" + n + ".jpg");
+    if (found.length) {
+      const html = found.map((f, i) => fig(f, shown + i)).join("");
+      if (shown) strip.insertAdjacentHTML("beforeend", html); else strip.innerHTML = html;
+      shown += found.length;
+    }
+    if (!ok.slice(4).some(Boolean)) break;   // four empty numbers in a row at the end of the group: the folder ends here
+  }
+  if (!shown) { wrap.remove(); return; }
   carousel(strip, wrap.querySelector(".dots"), 4200);
 });
 carousel(document.getElementById("reviews-track"), document.getElementById("reviews-dots"), 4500);
