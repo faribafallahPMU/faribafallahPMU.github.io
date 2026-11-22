@@ -242,7 +242,7 @@ html.js [data-reveal].in{opacity:1;transform:none}
   <div class="wrap">
     <a class="brand" href="#top">Fariba Fallah</a>
     <nav class="nav" aria-label="Sections">
-      <a href="#about">About</a><a href="#brows">Brows</a><a href="#lips">Lips</a><a href="#eyes">Eyes</a><a href="#prices">Prices</a><a href="#aftercare">Aftercare</a><a href="#contact">Contact</a>
+      <a href="#about">About</a><a href="#lips">Lips</a><a href="#brows">Brows</a><a href="#eyes">Eyes</a><a href="#prices">Prices</a><a href="#aftercare">Aftercare</a><a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -254,8 +254,8 @@ html.js [data-reveal].in{opacity:1;transform:none}
     <div class="hero-text">
       <p class="eyebrow">Permanent Makeup Artist · Dubai</p>
       <h1>Fariba <em>Fallah</em></h1>
-      <p class="lead">Soft, natural brows, lips and lash line. 7 years of experience, mineral pigments, every hair stroke drawn by hand.</p>
-      <nav class="quick" aria-label="Jump to"><a href="#brows">Brows</a><a href="#lips">Lips</a><a href="#eyes">Eyes</a><a href="#prices">Prices</a><a href="#aftercare">Aftercare</a></nav>
+      <p class="lead">Soft, natural lips, brows and lash line. 7 years of experience, mineral pigments, every hair stroke drawn by hand.</p>
+      <nav class="quick" aria-label="Jump to"><a href="#lips">Lips</a><a href="#brows">Brows</a><a href="#eyes">Eyes</a><a href="#prices">Prices</a><a href="#aftercare">Aftercare</a></nav>
     </div>
   </div>
 </section>
@@ -393,15 +393,27 @@ const SITE = {
   ],
   // Real client reviews. Empty = the whole reviews section is hidden. Format: { name: "Sarah M.", text: "…", source: "Instagram" }
   reviews: [],
-  // Service categories. Each service: name, lead, photos, text, points, price, book (label + WhatsApp message).
+  // Service categories, in the order shown on the page. Each service: name, lead, photos (its folder in carousel/),
+  // text, points, price, book (label + WhatsApp message). The folder holds 1.jpg, 2.jpg, 3.jpg ... shown in that order.
   categories: [
+    { id: "lips", title: "Lips", intro: "My most requested treatment: a soft tint that keeps your lips fresh and beautifully coloured, even without makeup.",
+      services: [
+        { id: "lip-blush", name: "Lip blush", lead: "Fresh, healthy, beautifully coloured lips every day.",
+          photos: "carousel/lip-blush",
+          caption: "Lip blush results from my studio",
+          text: "Lip blush is a delicate tint for the lips that looks very soft and natural. It's made especially for women who don't enjoy wearing makeup, but want their lips to look fresh, healthy and beautifully coloured every day.",
+          points: [
+            { t: "Natural tint", d: "The colour is matched to your skin tone and natural lip colour, so it never looks done." },
+            { t: "Lasts about 1.5 years", d: "Mineral pigments for soft, long-lasting colour." },
+            { t: "Painless", d: "A calm, comfortable session from start to finish." },
+            { t: "No swelling", d: "Your lips keep their natural size and shape." } ],
+          price: { amount: "AED 1,800", note: "Mineral pigments" },
+          book: { label: "Book lip blush", msg: "Hi! I want to book lip blush" } }
+      ] },
     { id: "brows", title: "Brows", intro: "Hair strokes drawn by hand, mineral pigments, and a shape measured for your face. From a first nanoblading to the cover-up of old work.",
       services: [
         { id: "microblading", name: "Microblading", lead: "The most natural way to fuller, defined brows.",
-          photos: [
-            { src: "photos/microblading-1.jpg", alt: "Natural hair-stroke microblading brow, close-up" },
-            { src: "photos/microblading-2.jpg", alt: "Freshly finished microblading brow during the session" },
-            { src: "photos/microblading-3.jpg", alt: "Client with soft, defined microblading brows" } ],
+          photos: "carousel/microblading",
           caption: "My work, photographed in the studio",
           text: "Microblading is a delicate technique that adds fine, hair-like strokes only where your brows need them. Your own hairs stay exactly as they are: I simply fill the sparse areas, so the new strokes blend in and look like your natural brows.",
           points: [
@@ -412,10 +424,7 @@ const SITE = {
           price: { amount: "AED 1,350", note: "Touch-up within one month: AED 100" },
           book: { label: "Book microblading", msg: "Hi! I want to book new microblading" } },
         { id: "nanoblading", name: "Nanoblading", lead: "Ultra-fine strokes for soft, natural brows: a gentle first step into permanent brows.",
-          photos: [
-            { src: "photos/nanoblading-1.jpg", alt: "Soft nanoblading brows, natural hair-like strokes" },
-            { src: "photos/nanoblading-2.jpg", alt: "Nanoblading before and after: before on top, after below" },
-            { src: "photos/nanoblading-3.jpg", alt: "Nanoblading brows with ultra-fine strokes" } ],
+          photos: "carousel/nanoblading",
           caption: "Nanoblading results from my studio",
           text: "Nanoblading uses a very fine needle to add delicate, hair-like strokes that blend with your own brow hairs, for a soft, natural, no-makeup look.",
           points: [
@@ -426,16 +435,7 @@ const SITE = {
           price: { amount: "AED 1,350", note: "Touch-up within one month: AED 100" },
           book: { label: "Book nanoblading", msg: "Hi! I want to book nanoblading" } },
         { id: "cover-up", name: "Brow cover-up", lead: "Free yourself from drawing on your brows for a long time, with fuller brows that look completely natural.",
-          photos: [
-            { src: "photos/cover-up-1.jpg", alt: "Old faded brow tattoo covered with microblading, before and after" },
-            { src: "photos/cover-up-2.jpg", alt: "Old purple-toned brows covered with natural hair strokes" },
-            { src: "photos/cover-up-3.jpg", alt: "Faded reddish brows refreshed with a cover-up" },
-            { src: "photos/cover-up-4.jpg", alt: "Old brow work covered for a softer, fuller shape" },
-            { src: "photos/cover-up-5.jpg", alt: "Brow cover-up with a fuller, defined shape" },
-            { src: "photos/cover-up-6.jpg", alt: "Faded brows before and after a cover-up" },
-            { src: "photos/cover-up-7.jpg", alt: "Uneven old brows covered with even hair strokes" },
-            { src: "photos/cover-up-8.jpg", alt: "Old brow work refreshed with a cover-up" },
-            { src: "photos/cover-up-9.jpg", alt: "Close-up of a brow before and after a cover-up" } ],
+          photos: "carousel/cover-up",
           caption: "Real cover-up results from my studio. In each photo: before on top, after below.",
           sub: "Old brows turned blue, red or grey?",
           swatches: [ { t: "Blue", c: "#56708c" }, { t: "Red", c: "#a4574c" }, { t: "Grey", c: "#807d78" } ],
@@ -448,14 +448,12 @@ const SITE = {
             { t: "About one hour", d: "for a cover-up session." } ],
           price: { amount: "AED 1,800", note: "Old or discoloured brows · about 1 hour" },
           notice: { title: "Please send a photo before booking", text: "A cover-up isn't possible for everyone, so a clear photo of your brows is needed first. I'll check it personally and tell you what we can do.", label: "Send a photo on WhatsApp", msg: "Hi! I want to book cover up microblading. Here is a photo of my brows:" } },
-        { id: "powder-brows", name: "Powder brows", lead: "A soft, shaded finish for fuller, defined brows.",
+        { id: "powder-brows", name: "Powder brows", lead: "A soft, shaded finish for fuller, defined brows.", photos: "carousel/powder-brows",
           text: "Powder brows give a soft, powdered look, like a light brow makeup, fuller than hair strokes. A good choice for oily skin, very sparse brows, or if you like a defined, filled-in shape.",
           price: { amount: "AED 2,000" },
           book: { label: "Book powder brows", msg: "Hi! I want to book powder brows" } },
         { id: "lamination", name: "Brow lamination & shaping", lead: "Lifted, wider-looking brows, beautifully groomed for about two months.",
-          photos: [
-            { src: "photos/lamination-1.jpg", alt: "Laminated brow, lifted and set in place" },
-            { src: "photos/lamination-2.jpg", alt: "Eyebrow lamination result with wider, fuller-looking brows" } ],
+          photos: "carousel/lamination",
           text: "Lamination lifts and sets your brow hairs in place, so your brows look wider, fuller and beautifully groomed. Shaping finishes the look with a clean, balanced line.",
           points: [
             { t: "Lifted, wider-looking brows" },
@@ -464,36 +462,10 @@ const SITE = {
           price: { amount: "AED 350", note: "Brow shaping AED 100 · Brow tint AED 100" },
           book: { label: "Book brow lamination", msg: "Hi! I want to book brow lamination" } }
       ] },
-    { id: "lips", title: "Lips", intro: "A soft tint that keeps your lips fresh and beautifully coloured, even without makeup.",
-      services: [
-        { id: "lip-blush", name: "Lip blush", lead: "Fresh, healthy, beautifully coloured lips every day.",
-          photos: [
-            { src: "photos/lip-blush-1.jpg", alt: "Fresh pink lip blush, glossy close-up" },
-            { src: "photos/lip-blush-2.jpg", alt: "Lip blush before and after: from dark lips to a fresh pink tone" },
-            { src: "photos/lip-blush-3.jpg", alt: "Soft red lip blush close-up" },
-            { src: "photos/lip-blush-4.jpg", alt: "Natural rosy lip blush, side view" },
-            { src: "photos/lip-blush-5.jpg", alt: "Natural rose lip blush close-up" },
-            { src: "photos/lip-blush-6.jpg", alt: "Glossy coral lip blush close-up" },
-            { src: "photos/lip-blush-7.jpg", alt: "Berry-toned lip blush with a defined shape" } ],
-          caption: "Lip blush results from my studio",
-          text: "Lip blush is a delicate tint for the lips that looks very soft and natural. It's made especially for women who don't enjoy wearing makeup, but want their lips to look fresh, healthy and beautifully coloured every day.",
-          points: [
-            { t: "Natural tint", d: "The colour is matched to your skin tone and natural lip colour, so it never looks done." },
-            { t: "Lasts about 1.5 years", d: "Mineral pigments for soft, long-lasting colour." },
-            { t: "Painless", d: "A calm, comfortable session from start to finish." },
-            { t: "No swelling", d: "Your lips keep their natural size and shape." } ],
-          price: { amount: "AED 1,800", note: "Mineral pigments" },
-          book: { label: "Book lip blush", msg: "Hi! I want to book lip blush" } }
-      ] },
     { id: "eyes", title: "Eyes", intro: "Defined eyes and fuller-looking lashes, with nothing to draw on in the morning.",
       services: [
         { id: "lash-line", name: "Lash line", lead: "Fuller-looking lashes and beautifully defined eyes, with no need to draw eyeliner every morning.",
-          photos: [
-            { src: "photos/lash-line-1.jpg", alt: "Upper lash line, close-up of both eyes", cap: "Upper lash line" },
-            { src: "photos/lash-line-2.jpg", alt: "Upper lash line close-up with fuller-looking lashes", cap: "Upper lash line" },
-            { src: "photos/lash-line-3.jpg", alt: "Soft upper lash line, natural result", cap: "Upper lash line" },
-            { src: "photos/lash-line-4.jpg", alt: "Lower lash line close-up", cap: "Lower lash line" },
-            { src: "photos/lash-line-5.jpg", alt: "Upper and lower lash line together", cap: "Upper and lower" } ],
+          photos: "carousel/lash-line",
           caption: "Lash line results from my studio",
           text: "Lash line enhancement places fine pigment within your lash line, so it looks completely natural: like fuller lashes, not makeup. You can choose the upper line, the lower line, or both.",
           points: [
@@ -504,9 +476,7 @@ const SITE = {
           price: { amount: "AED 1,200", note: "Upper lash line · lower lash line AED 1,200" },
           book: { label: "Book lash line", msg: "Hi! I want to book lash line enhancement" } },
         { id: "lash-lift", name: "Lash lift", lead: "Your own lashes, curled and lifted from the root.",
-          photos: [
-            { src: "photos/lash-lift-1.jpg", alt: "Lash lift with lifted natural lashes" },
-            { src: "photos/lash-lift-2.jpg", alt: "Lash lift close-up, curled from the root" } ],
+          photos: "carousel/lash-lift",
           text: "A lash lift curls and lifts your own lashes from the root, so they look longer, open up your eyes and really show, without extensions.",
           price: { amount: "AED 350", note: "Lash lift & lamination" },
           book: { label: "Book lash lift", msg: "Hi! I want to book lash lift and lamination" } }
@@ -514,13 +484,15 @@ const SITE = {
     { id: "extras", title: "Extras", intro: "Small touches, placed exactly where you'd like them.",
       services: [
         { id: "beauty-spot", name: "Beauty spot", lead: "A small, natural-looking beauty spot.",
-          photos: [ { src: "photos/beauty-spot-1.jpg", alt: "Small natural-looking beauty spot" } ],
+          photos: "carousel/beauty-spot",
           text: "A small, natural-looking beauty spot, placed exactly where you'd like it. For everyone who loves the look.",
           price: { amount: "AED 100" },
           book: { label: "Book a beauty spot", msg: "Hi! I want to book a beauty spot" } }
       ] }
   ],
   priceList: [
+    { group: "Lips", items: [
+      { name: "Lip blush", note: "Mineral pigments", price: "1,800", msg: "Hi! I want to book lip blush" } ] },
     { group: "Brows", items: [
       { name: "New microblading", note: "Lasts 1 to 1.5 years", price: "1,350", msg: "Hi! I want to book new microblading" },
       { name: "Nanoblading", note: "Ultra-fine strokes, ideal for first-timers", price: "1,350", msg: "Hi! I want to book nanoblading" },
@@ -529,8 +501,6 @@ const SITE = {
       { name: "Brow lamination", price: "350", msg: "Hi! I want to book brow lamination" },
       { name: "Brow shaping", price: "100", msg: "Hi! I want to book brow shaping" },
       { name: "Brow tint", price: "100", msg: "Hi! I want to book brow tint" } ] },
-    { group: "Lips", items: [
-      { name: "Lip blush", note: "Mineral pigments", price: "1,800", msg: "Hi! I want to book lip blush" } ] },
     { group: "Eyes", items: [
       { name: "Lash line enhancement", price: "1,200", msg: "Hi! I want to book lash line enhancement" },
       { name: "Lower lash line enhancement", price: "1,200", msg: "Hi! I want to book lower lash line enhancement" },
@@ -555,8 +525,7 @@ else document.getElementById("stats").hidden = true;
 
 /* services, by category */
 function serviceHTML(s) {
-  const figs = (s.photos || []).map(p => '<figure><img src="' + p.src + '" alt="' + p.alt + '" loading="lazy">' + (p.cap ? '<figcaption>' + p.cap + '</figcaption>' : '') + '</figure>').join("");
-  const strip = figs ? '<div class="strip-wrap"><div class="strip" aria-label="' + s.name + ' results">' + figs + '</div><div class="dots" aria-hidden="true"></div></div>' + (s.caption ? '<p class="gcap">' + s.caption + '</p>' : '') : "";
+  const strip = s.photos ? '<div class="strip-wrap" data-folder="' + s.photos + '" data-name="' + s.name + '" hidden><div class="strip" aria-label="' + s.name + ' results"></div><div class="dots" aria-hidden="true"></div>' + (s.caption ? '<p class="gcap">' + s.caption + '</p>' : '') + '</div>' : "";
   const sub = s.sub ? '<p class="svc-sub">' + s.sub + '</p>' : "";
   const swatch = s.swatches ? '<div class="swatch">' + s.swatches.map(w => '<span style="--c:' + w.c + '">' + w.t + '</span>').join("") + '</div>' : "";
   const paras = (Array.isArray(s.text) ? s.text : [s.text]).map(t => '<p class="svc-text">' + t + '</p>').join("");
@@ -620,7 +589,26 @@ function carousel(track, dots, every) {
     track.scrollTo({ left: next === undefined ? 0 : Math.min(next, max), behavior: "smooth" });
   }, every);
 }
-document.querySelectorAll(".strip").forEach(st => carousel(st, st.parentElement.querySelector(".dots"), 4200));
+/* each carousel shows the photos of its folder: 1.jpg, 2.jpg, 3.jpg ... in that order (add 8.jpg to add a photo) */
+const exists = url => fetch(url, { method: "HEAD" }).then(r => r.ok).catch(() => false);
+async function photosIn(folder) {
+  const found = [];
+  for (let start = 1; start <= 48; start += 4) {
+    const nums = [start, start + 1, start + 2, start + 3];
+    const ok = await Promise.all(nums.map(n => exists(folder + "/" + n + ".jpg")));
+    nums.forEach((n, k) => { if (ok[k]) found.push(folder + "/" + n + ".jpg"); });
+    if (!ok.some(Boolean)) break;   // four empty numbers in a row: the folder ends here
+  }
+  return found;
+}
+document.querySelectorAll(".strip-wrap[data-folder]").forEach(async wrap => {
+  const files = await photosIn(wrap.dataset.folder);
+  if (!files.length) { wrap.remove(); return; }
+  const strip = wrap.querySelector(".strip");
+  strip.innerHTML = files.map((f, i) => '<figure><img src="' + f + '" alt="' + wrap.dataset.name + ', photo ' + (i + 1) + '" loading="lazy"></figure>').join("");
+  wrap.hidden = false;
+  carousel(strip, wrap.querySelector(".dots"), 4200);
+});
 carousel(document.getElementById("reviews-track"), document.getElementById("reviews-dots"), 4500);
 
 /* soft reveal of blocks as they scroll into view */
