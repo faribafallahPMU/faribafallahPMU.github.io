@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Fariba Fallah · Permanent Makeup Artist in Dubai</title>
-<meta name="description" content="Fariba Fallah – permanent makeup artist in Dubai Media City: microblading, nano brows, lip blush, lash line and expert cover-ups of old brows. Appointments on WhatsApp.">
+<meta name="description" content="Fariba Fallah, permanent makeup artist in Dubai Media City. Microblading, nanoblading, brow cover-ups, lip blush, lash line, lamination and lash lift. Prices, aftercare and booking on WhatsApp.">
 <meta name="theme-color" content="#0e0d0c">
 <meta property="og:title" content="Fariba Fallah · Permanent Makeup Artist in Dubai">
-<meta property="og:description" content="Microblading, nano brows, lip blush, lash line and cover-ups in Dubai Media City. Appointments on WhatsApp.">
+<meta property="og:description" content="Microblading, nanoblading, cover-ups, lip blush and lash line in Dubai Media City. 7 years of experience, mineral pigments. Appointments on WhatsApp.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://faribafallahpmu.github.io/">
 <meta property="og:image" content="https://faribafallahpmu.github.io/photos/portrait.jpg">
@@ -16,12 +16,12 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230e0d0c'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-style='italic' text-anchor='middle' fill='%23d2b06f'%3EF%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#0e0d0c;--bg2:#141211;--card:#1a1816;--line:#2a2623;--ink:#efe8dc;--muted:#a0978a;
   --gold:#d2b06f;--gold2:#ecd49c;--wa:#25D366;
-  --serif:"Playfair Display",Georgia,"Times New Roman",serif;--sans:"Montserrat",system-ui,-apple-system,sans-serif;
+  --serif:"Playfair Display",Georgia,"Times New Roman",serif;--sans:"Montserrat",system-ui,-apple-system,sans-serif;--script:"Great Vibes",cursive;
   --r:16px;--max:1120px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -29,48 +29,36 @@ html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.7;font-size:15.5px}
 a{color:inherit;text-decoration:none}
 svg{display:block}
+img{display:block;max-width:100%}
 .wrap{width:min(100% - 40px,var(--max));margin-inline:auto}
 h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08}
-section{scroll-margin-top:66px}
+section,article{scroll-margin-top:72px}
 .eyebrow{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:500}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 22px;border-radius:999px;font-weight:600;font-size:14px;letter-spacing:.04em;white-space:nowrap;transition:transform .2s ease,box-shadow .2s ease}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 22px;border-radius:999px;font-weight:600;font-size:14px;letter-spacing:.04em;white-space:nowrap;transition:transform .2s ease,background .2s ease}
 .btn:hover{transform:translateY(-1px)}
 .btn svg{width:18px;height:18px;flex:none;fill:currentColor}
-.btn-gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1b1507;box-shadow:0 14px 30px -12px rgba(210,176,111,.6)}
-.btn-outline{border:1px solid rgba(210,176,111,.45);color:var(--gold2)}
 .btn-wa{background:var(--wa);color:#fff;box-shadow:0 14px 30px -12px rgba(37,211,102,.65)}
 .btn-wa:hover{background:#1fbd5b}
-
-/* photo placeholders – replaced by real photos later */
-.ph{position:relative;overflow:hidden;background:linear-gradient(135deg,#2b2622,#1d1a17 55%,#171412);display:grid;place-items:center;color:rgba(236,212,156,.5);aspect-ratio:4/5;border:1px solid rgba(210,176,111,.18)}
-.ph::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 15%,rgba(236,212,156,.14),transparent 50%)}
-.ph>div{position:relative;z-index:1;display:grid;place-items:center;gap:6px;text-align:center;padding:12px}
-.ph svg{width:28px;height:28px}
-.ph span{font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
-.ph.v2{background:linear-gradient(135deg,#2e2721,#1f1a16 55%,#171310)}
-.ph.v3{background:linear-gradient(135deg,#272522,#1b1917 55%,#141311)}
 
 /* top bar */
 .topbar{position:sticky;top:0;z-index:50;background:rgba(14,13,12,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:14px}
 .brand{font-family:var(--serif);font-size:21px;color:var(--gold2);letter-spacing:.03em}
-.nav{display:none;gap:28px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.nav{display:none;gap:24px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .nav a:hover{color:var(--gold2)}
 
 /* hero */
 .hero{overflow:hidden}
 .hero .wrap{display:grid}
 .photo{position:relative;margin:0 -20px}
-.photo .ph{aspect-ratio:3/4;border:0;border-radius:0}
+.photo img{aspect-ratio:3/4;width:100%;object-fit:cover}
 .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,var(--bg) 0%,rgba(14,13,12,.6) 32%,transparent 70%)}
 .hero-text{position:relative;margin-top:-150px;padding-bottom:52px}
 .hero h1{font-size:clamp(48px,12vw,88px);margin-top:14px}
 .hero h1 em{font-style:italic;color:var(--gold2)}
 .lead{color:var(--muted);max-width:44ch;margin-top:16px;font-size:16px}
-.corners{position:relative;padding:14px}
-.corners::before,.corners::after{content:"";position:absolute;width:56px;height:56px;border:1px solid var(--gold)}
-.corners::before{top:0;left:0;border-right:0;border-bottom:0}
-.corners::after{bottom:0;right:0;border-left:0;border-top:0}
+.quick{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:26px;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;font-weight:500}
+.quick a{color:var(--gold2);border-bottom:1px solid rgba(210,176,111,.4);padding-bottom:3px}
 
 /* highlights */
 .stats{background:var(--bg2);border-block:1px solid var(--line)}
@@ -81,35 +69,105 @@ section{scroll-margin-top:66px}
 /* about */
 .about{padding:76px 0}
 .about .wrap{display:grid;gap:48px}
-.about .corners{width:min(100%,420px);margin-inline:auto}
-.about .ph{border-radius:var(--r)}
+.corners{position:relative;padding:14px;width:min(100%,420px);margin-inline:auto}
+.corners::before,.corners::after{content:"";position:absolute;width:56px;height:56px;border:1px solid var(--gold)}
+.corners::before{top:0;left:0;border-right:0;border-bottom:0}
+.corners::after{bottom:0;right:0;border-left:0;border-top:0}
+.corners img{aspect-ratio:4/5;width:100%;object-fit:cover;border-radius:var(--r)}
 .about h2{font-size:clamp(36px,8vw,54px);margin:12px 0 18px}
 .about h2 em{font-style:italic;color:var(--gold2)}
 .about p{color:var(--muted);margin-bottom:14px}
-.checks{list-style:none;margin-top:24px;display:grid;gap:10px}
-.checks li{display:flex;gap:12px;align-items:flex-start}
-.checks li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);margin-top:11px;flex:none}
+.vals{list-style:none;margin-top:22px}
+.vals li{padding:12px 0 12px 22px;border-top:1px solid var(--line);position:relative;color:var(--muted);font-size:14.5px}
+.vals li b{display:block;color:var(--ink);font-weight:500;font-size:15.5px}
+.vals li::before{content:"";position:absolute;left:3px;top:21px;width:7px;height:7px;background:var(--gold);transform:rotate(45deg)}
+.thanks{margin-top:18px;color:var(--ink)}
+.sig{font-family:var(--script);font-size:46px;line-height:1;color:var(--gold2);margin-top:4px}
 
-/* carousels */
-.services,.reviews{padding:76px 0;background:var(--bg2);border-block:1px solid var(--line)}
-.sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:10px 24px;margin-bottom:28px}
-.sec-head h2{font-size:clamp(36px,8vw,54px);margin-top:10px}
-.sec-head p{color:var(--muted);font-size:13px}
-.track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:20px;padding:6px 20px 22px;margin:0 -20px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-.track::-webkit-scrollbar{display:none}
-.card{flex:0 0 min(76vw,320px);scroll-snap-align:start;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:border-color .3s}
-.card:hover{border-color:rgba(210,176,111,.5)}
-.card .ph{aspect-ratio:4/3;border:0;border-bottom:1px solid var(--line)}
-.card-body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
-.card h3{font-size:23px}
-.card p{color:var(--muted);font-size:13.5px;flex:1}
-.meta{display:flex;justify-content:space-between;align-items:baseline;margin-top:4px}
-.price{font-family:var(--serif);font-size:24px;color:var(--gold2)}
-.dur{font-size:12px;color:var(--muted);letter-spacing:.06em}
-.book{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--gold2);border-bottom:1px solid rgba(210,176,111,.5);align-self:flex-start;padding-bottom:3px;margin-top:6px}
-.dots{display:flex;gap:6px;justify-content:center;margin-top:6px}
+/* service categories */
+.cat{padding:72px 0 44px;border-top:1px solid var(--line)}
+.cat.alt{background:var(--bg2)}
+.cat-head{text-align:center;max-width:62ch;margin:0 auto 36px}
+.cat-head h2{font-size:clamp(42px,10vw,64px);margin-top:10px}
+.cat-head p{color:var(--muted);margin-top:10px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px 0;margin-bottom:26px;overflow:hidden}
+.svc-head,.svc-body,.gcap{padding-inline:22px}
+.svc h3{font-size:clamp(28px,6.5vw,36px)}
+.svc .lead{margin-top:8px;font-size:15.5px}
+.strip-wrap{margin-top:22px}
+.strip{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:22px;padding:0 22px 14px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.strip::-webkit-scrollbar{display:none}
+.strip figure{flex:none;height:clamp(260px,64vw,360px);border-radius:14px;overflow:hidden;scroll-snap-align:start;position:relative;background:#000}
+.strip img{height:100%;width:auto}
+.strip figcaption{position:absolute;left:10px;bottom:10px;background:rgba(14,13,12,.8);color:var(--gold2);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;padding:5px 10px;border-radius:999px}
+.dots{display:flex;gap:6px;justify-content:center;margin-top:2px}
 .dots i{width:6px;height:6px;border-radius:999px;background:#2f2a26;transition:all .3s}
 .dots i.on{background:var(--gold);width:20px}
+.gcap{text-align:center;font-size:12.5px;color:var(--muted);margin-top:10px}
+.svc-body{padding-top:16px}
+.svc-sub{font-family:var(--serif);font-size:21px;color:var(--ink);margin-bottom:8px}
+.svc-text{color:var(--muted);margin-top:10px}
+.pts{display:grid;gap:10px;margin-top:18px}
+.pt{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.pt b{display:flex;align-items:center;gap:9px;font-weight:500;color:var(--ink);font-size:15px}
+.pt b::before{content:"";width:6px;height:6px;background:var(--gold);transform:rotate(45deg);flex:none}
+.pt span{display:block;color:var(--muted);font-size:14px;margin-top:4px}
+.swatch{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px}
+.swatch span{display:inline-flex;align-items:center;gap:8px;font-size:13px;padding:5px 12px 5px 7px;border-radius:999px;background:var(--bg);border:1px solid var(--line)}
+.swatch span::before{content:"";width:14px;height:14px;border-radius:50%;background:var(--c)}
+.notice{margin-top:22px;border:1px solid rgba(210,176,111,.45);border-radius:16px;padding:22px 18px;text-align:center;background:radial-gradient(circle at 50% -20%,rgba(210,176,111,.18),transparent 60%)}
+.notice b{display:block;font-family:var(--serif);font-size:21px;color:var(--gold2);margin-bottom:6px;font-weight:400}
+.notice p{color:var(--muted);font-size:14.5px;margin-bottom:16px}
+.svc-foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+.price{font-family:var(--serif);font-size:26px;color:var(--gold2);line-height:1.1}
+.price small{display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted);margin-top:5px;letter-spacing:.02em}
+
+/* price list */
+.prices{padding:76px 0;background:var(--bg2);border-block:1px solid var(--line)}
+.sec-head{text-align:center;margin-bottom:28px}
+.sec-head h2{font-size:clamp(36px,8vw,54px);margin-top:10px}
+.sec-head h2 em{font-style:italic;color:var(--gold2)}
+.sec-head p{color:var(--muted);font-size:14px;margin-top:8px}
+.sheet{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px 18px}
+.grp{padding-top:14px;break-inside:avoid}
+.grp h3{font-family:var(--sans);font-weight:600;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin:8px 0 4px}
+.row{display:flex;align-items:baseline;gap:8px;padding:10px 4px;border-radius:8px}
+.row:hover{background:var(--bg)}
+.nm{display:flex;flex-direction:column;font-size:15px}
+.nm small{font-size:12.5px;color:var(--muted);line-height:1.35}
+.lead-dots{flex:1;border-bottom:1.5px dotted rgba(210,176,111,.5);transform:translateY(-5px);min-width:16px}
+.pr{white-space:nowrap;font-family:var(--serif);font-size:19px;color:var(--gold2)}
+.pr span{font-family:var(--sans);font-size:11px;color:var(--muted);margin-right:4px;letter-spacing:.06em}
+.note{text-align:center;color:var(--muted);font-size:13px;margin-top:20px}
+
+/* how to book */
+.steps{padding:76px 0;border-bottom:1px solid var(--line)}
+.steps-grid{list-style:none;display:grid;gap:14px;margin-bottom:30px}
+.steps-grid li{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px 22px}
+.steps-grid span{font-family:var(--serif);font-size:30px;color:var(--gold2);display:block;line-height:1;margin-bottom:12px}
+.steps-grid b{display:block;font-weight:600;font-size:16px;margin-bottom:6px;color:var(--ink)}
+.steps-grid p{color:var(--muted);font-size:14px}
+.steps-grid li:nth-child(2){transition-delay:.12s}
+.steps-grid li:nth-child(3){transition-delay:.24s}
+.steps .center{text-align:center}
+
+/* aftercare */
+.aftercare{padding:76px 0;background:var(--bg2);border-bottom:1px solid var(--line)}
+.care{display:grid;gap:12px;max-width:760px;margin:0 auto}
+details{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:0 20px}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:60px;font-family:var(--serif);font-size:19px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--sans);font-size:26px;font-weight:300;color:var(--gold);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details ul{list-style:none;padding-bottom:16px}
+details li{padding:10px 0 10px 22px;border-top:1px solid var(--line);position:relative;color:var(--muted);font-size:14.5px}
+details li::before{content:"";position:absolute;left:3px;top:19px;width:7px;height:7px;background:var(--gold);transform:rotate(45deg)}
+details li b{display:block;color:var(--ink);font-weight:500}
+
+/* reviews (shown only when there are some) */
+.reviews{padding:76px 0;border-bottom:1px solid var(--line)}
+.track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:20px;padding:6px 20px 22px;margin:0 -20px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.track::-webkit-scrollbar{display:none}
 .review{flex:0 0 min(84vw,380px);scroll-snap-align:start;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column}
 .stars{display:flex;gap:3px;color:var(--gold);margin-bottom:14px}
 .stars svg{width:14px;height:14px;fill:currentColor}
@@ -118,13 +176,6 @@ section{scroll-margin-top:66px}
 .review footer b{font-weight:500;color:var(--ink)}
 .review footer span{color:var(--muted);font-size:12px}
 .avatar{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1b1507;display:grid;place-items:center;font-family:var(--serif);font-size:18px;flex:none}
-
-/* gallery */
-.gallery{padding:76px 0}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.grid .ph{aspect-ratio:4/5;border-radius:10px}
-.ig{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
-.ig svg{width:18px;height:18px}
 
 /* contact */
 .contact{padding:80px 0 60px}
@@ -137,14 +188,17 @@ section{scroll-margin-top:66px}
 .info svg{width:22px;height:22px;color:var(--gold);margin:0 auto 8px}
 .info b{display:block;font-family:var(--serif);font-size:20px;font-weight:400}
 .info span{color:var(--muted);font-size:13px}
+.info a.u{border-bottom:1px solid rgba(210,176,111,.5)}
 footer.site{padding:26px 0 120px;text-align:center;color:var(--muted);font-size:12px;letter-spacing:.06em;border-top:1px solid var(--line)}
 
-/* floating "Book now" button */
-/* the only persistent booking button: bottom-right, inside the thumb zone and where visitors expect a chat button */
+/* the only persistent booking button: bottom-right, inside the thumb zone */
 .fab{position:fixed;right:16px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:60;display:inline-flex;align-items:center;gap:10px;padding:16px 22px;border-radius:999px;background:var(--wa);color:#fff;font-weight:600;font-size:14px;letter-spacing:.04em;box-shadow:0 14px 30px -10px rgba(37,211,102,.65);transition:transform .2s,background .2s}
-.fab:hover{background:#1fbd5b}
-.fab:hover{transform:translateY(-2px)}
+.fab:hover{background:#1fbd5b;transform:translateY(-2px)}
 .fab svg{width:22px;height:22px;fill:currentColor}
+
+/* soft reveal while scrolling */
+html.js [data-reveal]{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
+html.js [data-reveal].in{opacity:1;transform:none}
 
 @media(min-width:900px){
   .nav{display:flex}
@@ -152,51 +206,43 @@ footer.site{padding:26px 0 120px;text-align:center;color:var(--muted);font-size:
   .hero .wrap{grid-template-columns:1.05fr .95fr;align-items:center;gap:64px}
   .photo{margin:0;order:2;width:min(100%,440px);margin-left:auto}
   .photo::after{display:none}
-  .photo .ph{aspect-ratio:4/5;border-radius:var(--r);border:1px solid rgba(210,176,111,.25)}
+  .photo img{aspect-ratio:4/5;border-radius:var(--r);border:1px solid rgba(210,176,111,.25)}
   .hero-text{margin-top:0;padding:0}
   .about .wrap{grid-template-columns:1fr 1fr;align-items:center;gap:72px}
-  .about .corners{margin:0}
-  .track{margin:0;padding:6px 0 22px;scroll-padding-inline:0}
-  .card{flex-basis:300px}
+  .corners{margin:0}
+  .cat{padding:90px 0 60px}
+  .svc{padding:32px 0}
+  .svc-head,.svc-body,.gcap{padding-inline:32px}
+  .strip{padding-inline:32px;scroll-padding-inline:32px}
+  .strip figure{height:380px}
+  .pts{grid-template-columns:1fr 1fr}
+  .sheet{padding:40px 44px}
+  .cols{column-count:2;column-gap:48px}
+  .steps-grid{grid-template-columns:repeat(3,1fr);gap:18px}
   .review{flex-basis:360px}
-  .grid{grid-template-columns:repeat(6,1fr);gap:12px}
+  .track{margin:0;padding:6px 0 22px;scroll-padding-inline:0}
   .box{padding:84px 48px}
-  .info{grid-template-columns:repeat(3,1fr)}
+  .info{grid-template-columns:repeat(4,1fr)}
   footer.site{padding-bottom:40px}
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-img.ph{object-fit:cover;width:100%;height:auto}
-/* cover-up steps */
-.steps{padding:76px 0;border-bottom:1px solid var(--line)}
-.steps-grid{list-style:none;display:grid;gap:14px;margin-bottom:30px}
-.steps-grid li{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px 22px}
-.steps-grid span{font-family:var(--serif);font-size:30px;color:var(--gold2);display:block;line-height:1;margin-bottom:12px}
-.steps-grid b{display:block;font-weight:600;font-size:16px;margin-bottom:6px;color:var(--ink)}
-.steps-grid p{color:var(--muted);font-size:14px}
-.steps-grid li:nth-child(2){transition-delay:.12s}
-.steps-grid li:nth-child(3){transition-delay:.24s}
-/* soft reveal while scrolling */
-html.js [data-reveal]{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
-html.js [data-reveal].in{opacity:1;transform:none}
-@media(min-width:900px){.steps-grid{grid-template-columns:repeat(3,1fr);gap:18px}}
-@media(prefers-reduced-motion:reduce){html.js [data-reveal]{opacity:1;transform:none;transition:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}html.js [data-reveal]{opacity:1;transform:none;transition:none}}
 </style>
 </head>
 <body>
 <svg style="display:none" aria-hidden="true">
   <symbol id="i-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
   <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></symbol>
-  <symbol id="i-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.5"/></symbol>
   <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></symbol>
   <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.3-6-11a6 6 0 0 1 12 0c0 5.7-6 11-6 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
   <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
 </svg>
 
 <header class="topbar">
   <div class="wrap">
     <a class="brand" href="#top">Fariba Fallah</a>
     <nav class="nav" aria-label="Sections">
-      <a href="#about">About</a><a href="#services">Services</a><a href="#cover-up">Cover-up</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+      <a href="#about">About</a><a href="#brows">Brows</a><a href="#lips">Lips</a><a href="#eyes">Eyes</a><a href="#prices">Prices</a><a href="#aftercare">Aftercare</a><a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -204,11 +250,12 @@ html.js [data-reveal].in{opacity:1;transform:none}
 <main id="top">
 <section class="hero">
   <div class="wrap">
-    <div class="photo"><img class="ph" src="photos/portrait.jpg" alt="Fariba Fallah, permanent makeup artist"></div>
+    <div class="photo"><img src="photos/portrait.jpg" alt="Fariba Fallah, permanent makeup artist"></div>
     <div class="hero-text">
       <p class="eyebrow">Permanent Makeup Artist · Dubai</p>
       <h1>Fariba <em>Fallah</em></h1>
-      <p class="lead">Microblading, nano brows, lip blush and lash line in a private studio in Dubai Media City. Natural, hair-like strokes and expert cover-ups of old brows.</p>
+      <p class="lead">Soft, natural brows, lips and lash line. 7 years of experience, mineral pigments, every hair stroke drawn by hand.</p>
+      <nav class="quick" aria-label="Jump to"><a href="#brows">Brows</a><a href="#lips">Lips</a><a href="#eyes">Eyes</a><a href="#prices">Prices</a><a href="#aftercare">Aftercare</a></nav>
     </div>
   </div>
 </section>
@@ -219,69 +266,92 @@ html.js [data-reveal].in{opacity:1;transform:none}
 
 <section class="about" id="about">
   <div class="wrap">
-    <div class="corners" data-reveal><img class="ph" src="photos/about-1.jpg" alt="Fariba at work"></div>
+    <div class="corners" data-reveal><img src="photos/about-1.jpg" alt="Fariba Fallah at work"></div>
     <div data-reveal>
-      <p class="eyebrow">About</p>
-      <h2>Meet <em>Fariba</em></h2>
-      <p>I am a permanent makeup artist based in Dubai Media City, specialising in microblading, nano brows, lip blush, lash line and the cover-up of old tattooed brows.</p>
-      <p>Every treatment starts with a consultation. I study your features, draw the shape and agree the colour with you before a single stroke is made, so the result looks natural, balanced and unmistakably yours.</p>
-      <ul class="checks">
-        <li>Private studio, one client at a time, by appointment only</li>
-        <li>Single-use needles, sterile tools and strict hygiene</li>
-        <li>Natural, long-lasting results with full aftercare guidance</li>
+      <p class="eyebrow">About me</p>
+      <h2>Hi, I'm <em>Fariba.</em></h2>
+      <p>I'm a permanent makeup artist with 7 years of experience. I started my career with microblading, completed my full professional training, and I have always worked with mineral pigments.</p>
+      <ul class="vals">
+        <li><b>Natural results</b>A natural look matters most to me. My work should enhance your features, never look heavy or overdone.</li>
+        <li><b>Always honest with you</b>I'll always be honest with you, and I'll recommend the technique that truly suits you.</li>
+        <li><b>Hygiene comes first</b>It's the most important part of permanent makeup. Needles are strictly single-use, and tweezers and scissors are sterilised.</li>
+        <li><b>Your happiness</b>Your happiness, and your feedback after every session, mean a lot to me.</li>
       </ul>
+      <p class="thanks">Giving you a natural, beautiful look is what makes me happy. Thank you for your trust.</p>
+      <p class="sig" aria-hidden="true">Fariba</p>
     </div>
   </div>
 </section>
 
-<section class="services" id="services">
+<div id="categories"></div>
+
+<section class="prices" id="prices">
   <div class="wrap">
-    <div class="sec-head" data-reveal>
-      <div><p class="eyebrow">Menu</p><h2>Services & prices</h2></div>
+    <div class="sec-head" data-reveal><p class="eyebrow">Price list</p><h2>Prices, <em>by category</em></h2><p>Tap a service to book it on WhatsApp</p></div>
+    <div class="sheet" data-reveal>
+      <div class="cols" id="price-cols"></div>
+      <p class="note" id="price-note"></p>
     </div>
-    <div class="track" id="services-track" aria-label="Services"></div>
-    <div class="dots" id="services-dots" aria-hidden="true"></div>
   </div>
 </section>
 
-<section class="steps" id="cover-up">
+<section class="steps" id="booking">
   <div class="wrap">
-    <div class="sec-head" data-reveal>
-      <div><p class="eyebrow">Old tattoo brows?</p><h2>Cover-up, <em>step by step</em></h2></div>
-      <p>No laser · no removal · photo check first</p>
-    </div>
+    <div class="sec-head" data-reveal><p class="eyebrow">Appointments</p><h2>How to <em>book</em></h2></div>
     <ol class="steps-grid">
-      <li data-reveal><span>01</span><b>Send a photo</b><p>Message me a clear photo of your brows on WhatsApp, in daylight and without makeup.</p></li>
-      <li data-reveal><span>02</span><b>Photo check</b><p>I tell you honestly what is possible, which technique suits your skin and confirm the price before you book.</p></li>
-      <li data-reveal><span>03</span><b>We book</b><p>Your session in my private studio in Dubai Media City, with free parking and full aftercare guidance.</p></li>
+      <li data-reveal><span>01</span><b>Message me</b><p>On WhatsApp, tell me which service you'd like. For a cover-up, add a photo of your brows.</p></li>
+      <li data-reveal><span>02</span><b>Choose your time</b><p>Monday to Saturday, between 10:00 and 19:00. Free parking at the studio.</p></li>
+      <li data-reveal><span>03</span><b>Your session</b><p>We design the shape together first, so it suits your face. Then I take my time.</p></li>
     </ol>
-    <a class="btn btn-wa" data-wa data-wa-msg="Hello Fariba, I would like a cover-up of my old brows. Here is a photo:" href="#"><svg><use href="#i-wa"/></svg>Send a photo on WhatsApp</a>
+    <p class="center"><a class="btn btn-wa" data-wa href="#"><svg><use href="#i-wa"/></svg>Book on WhatsApp</a></p>
   </div>
 </section>
 
-<section class="gallery">
+<section class="aftercare" id="aftercare">
   <div class="wrap">
-    <div class="sec-head" data-reveal>
-      <div><p class="eyebrow">Portfolio</p><h2>Recent work</h2></div>
-      <a class="ig" data-ig href="#"><svg><use href="#i-ig"/></svg><span data-ig-handle>@fariba.fallahpmu</span></a>
-    </div>
-    <div class="grid" data-reveal>
-      <img class="ph" src="photos/before-after-1.jpg" alt="Before and after: microblading" loading="lazy">
-      <img class="ph" src="photos/before-after-2.jpg" alt="Before and after: nano brows" loading="lazy">
-      <img class="ph" src="photos/brows-lips.jpg" alt="Healed brows and lip blush" loading="lazy">
-      <img class="ph" src="photos/lash-lift.jpg" alt="Lash line" loading="lazy">
-      <img class="ph" src="photos/brow-lamination.jpg" alt="Brow lamination" loading="lazy">
-      <img class="ph" src="photos/lash-lift-2.jpg" alt="Lash lift and brow lamination" loading="lazy">
+    <div class="sec-head" data-reveal><p class="eyebrow">After your session</p><h2>Aftercare</h2><p>Your care makes the difference. Tap a treatment to see the steps.</p></div>
+    <div class="care" data-reveal>
+      <details>
+        <summary>Brow aftercare</summary>
+        <ul>
+          <li><b>First 2 days</b>Don't wash or shower your brows.</li>
+          <li><b>For 5 days</b>Apply the aftercare cream I give you once a day.</li>
+          <li><b>For 1 week, please avoid</b>Sauna, swimming, sun tanning or direct sun, and facial treatments.</li>
+          <li><b>After around 2 to 3 weeks</b>Come back for your touch-up session.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Lip blush aftercare</summary>
+        <ul>
+          <li><b>If you smoke</b>Avoid smoking for at least 3 hours after the procedure. When you smoke, avoid pressing your lips together, to protect the pigment.</li>
+          <li><b>Drinks on the first day</b>During the first 24 hours, please drink only with a straw.</li>
+          <li><b>Hot food and drinks</b>Avoid them for the first 24 hours.</li>
+          <li><b>History of cold sores</b>Please start taking cold sore medication before the procedure or on the same day.</li>
+          <li><b>Aftercare cream</b>Apply the cream I give you whenever your lips feel dry. Depending on your skin, your lips may become dry or slightly flaky while healing; if they feel very dry, you may also use a colourless lip balm.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Brow lamination aftercare</summary>
+        <ul>
+          <li><b>After each wash</b>While your brows are still damp, comb them into shape and let them dry, so they set in place.</li>
+          <li><b>How long it lasts</b>About 2 months.</li>
+        </ul>
+      </details>
+      <details>
+        <summary>Lash line aftercare</summary>
+        <ul>
+          <li><b>First 2 days</b>Don't wash or shower your eyes.</li>
+          <li><b>Hands off</b>Please avoid touching or rubbing your eyes.</li>
+          <li><b>For 4 days</b>Avoid mascara and any eye makeup.</li>
+        </ul>
+      </details>
     </div>
   </div>
 </section>
 
 <section class="reviews" id="reviews">
   <div class="wrap">
-    <div class="sec-head" data-reveal>
-      <div><p class="eyebrow">Testimonials</p><h2>Kind words</h2></div>
-      <p>From clients on Instagram and Google</p>
-    </div>
+    <div class="sec-head" data-reveal><p class="eyebrow">Testimonials</p><h2>Kind words</h2><p>From clients on Instagram and Google</p></div>
     <div class="track" id="reviews-track" aria-label="Client reviews"></div>
     <div class="dots" id="reviews-dots" aria-hidden="true"></div>
   </div>
@@ -297,81 +367,239 @@ html.js [data-reveal].in{opacity:1;transform:none}
     </div>
     <div class="info">
       <div data-reveal><svg><use href="#i-pin"/></svg><b>Dubai Media City</b><span>Private studio · free parking</span></div>
-      <div data-reveal><svg><use href="#i-clock"/></svg><b>Appointments</b><span>By appointment only · booking on WhatsApp</span></div>
-      <div data-reveal><svg><use href="#i-ig"/></svg><b>Instagram</b><a data-ig href="#"><span data-ig-handle>@fariba.fallahpmu</span></a></div>
+      <div data-reveal><svg><use href="#i-clock"/></svg><b>Hours</b><span>Monday to Saturday · 10:00 – 19:00</span></div>
+      <div data-reveal><svg><use href="#i-phone"/></svg><b>WhatsApp</b><a class="u" data-wa href="#"><span>050 648 2550</span></a></div>
+      <div data-reveal><svg><use href="#i-ig"/></svg><b>Instagram</b><a class="u" data-ig href="#"><span data-ig-handle>@fariba.fallahpmu</span></a><br><span>More of my work and client reviews</span></div>
     </div>
   </div>
 </section>
 </main>
 
-<footer class="site"><div class="wrap">© <span id="year"></span> Fariba Fallah · All rights reserved</div></footer>
+<footer class="site"><div class="wrap">© <span id="year"></span> Fariba Fallah · Permanent makeup artist · Dubai Media City</div></footer>
 
 <a class="fab" data-wa href="#" aria-label="Book now on WhatsApp"><svg><use href="#i-wa"/></svg><span>Book now</span></a>
 
 <script>
 /* ========= EDIT YOUR CONTENT HERE ========= */
 const SITE = {
-  whatsapp: "971506482550",            // your number in international format, digits only (no +, no spaces)
-  whatsappMessage: "Hello Fariba, I would like to book an appointment.",
-  instagram: "fariba.fallahpmu",         // your Instagram handle without @
-  services: [
-    // price: what is shown in gold. duration: shown small next to it, leave "" to hide it.
-    { name: "Microblading", desc: "Natural, hair-like strokes drawn one by one for brows that look like your own.", duration: "", price: "price on request", img: "photos/microblading.jpg" },
-    { name: "Nano brows", desc: "Ultra-fine strokes with a nano needle: soft, precise and suited to every skin type.", duration: "", price: "price on request", img: "photos/powder-brows.jpg" },
-    { name: "Lip blush", desc: "A natural tint that defines the lip line and evens out the colour.", duration: "", price: "price on request", img: "photos/lip-blush.jpg" },
-    { name: "Lash line", desc: "A fine line between the lashes for eyes that look defined and awake, with no makeup.", duration: "", price: "price on request", img: "photos/lash-lift.jpg" },
-    { name: "Cover-up of old tattoo brows", desc: "Old or faded tattooed brows corrected and covered. No laser, no removal: send a photo first, then we book.", duration: "", price: "1,800 AED", img: "photos/cover-up.jpg", cta: "Send a photo on WhatsApp", msg: "Hello Fariba, I would like a cover-up of my old brows. Here is a photo:" }
+  whatsapp: "971506482550",
+  whatsappMessage: "Hi Fariba! I'd like to book an appointment",
+  instagram: "fariba.fallahpmu",
+  // Highlights row under the main photo. Empty = hidden.
+  facts: [
+    { big: "7", label: "Years of experience" },
+    { big: "1–1.5", label: "Years the results last" },
+    { big: "Mon–Sat", label: "10:00 – 19:00" }
   ],
-  // Highlights row under the main photo. Empty = hidden. Example of the format:
-  // facts: [{ big: "8+", label: "Years" }, { big: "1,200+", label: "Happy clients" }, { big: "5.0", label: "Average rating" }],
-  facts: [],
-  // Real client reviews. Empty = the whole reviews section is hidden. Example of the format:
-  // { name: "Sarah M.", text: "My brows have never looked this natural.", source: "Instagram" },
-  reviews: []
+  // Real client reviews. Empty = the whole reviews section is hidden. Format: { name: "Sarah M.", text: "…", source: "Instagram" }
+  reviews: [],
+  // Service categories. Each service: name, lead, photos, text, points, price, book (label + WhatsApp message).
+  categories: [
+    { id: "brows", title: "Brows", intro: "Hair strokes drawn by hand, mineral pigments, and a shape measured for your face. From a first nanoblading to the cover-up of old work.",
+      services: [
+        { id: "microblading", name: "Microblading", lead: "The most natural way to fuller, defined brows.",
+          photos: [
+            { src: "photos/microblading-1.jpg", alt: "Natural hair-stroke microblading brow, close-up" },
+            { src: "photos/microblading-2.jpg", alt: "Freshly finished microblading brow during the session" },
+            { src: "photos/microblading-3.jpg", alt: "Client with soft, defined microblading brows" } ],
+          caption: "My work, photographed in the studio",
+          text: "Microblading is a delicate technique that adds fine, hair-like strokes only where your brows need them. Your own hairs stay exactly as they are: I simply fill the sparse areas, so the new strokes blend in and look like your natural brows.",
+          points: [
+            { t: "Measured before we begin", d: "Every session starts with precise brow mapping. I measure your brows and face, design the shape with you, and fill the gaps following those measurements." },
+            { t: "Only the gaps are filled", d: "Strokes are placed only in the empty areas, in the direction your hair grows, so the result looks completely natural." },
+            { t: "Gentle on your skin", d: "Every stroke is made with great precision and care. In most cases, depending on your skin type, there is no bleeding." },
+            { t: "Lasts 1 to 1.5 years", d: "Mineral pigments keep the colour true; how long it lasts depends on your skin." } ],
+          price: { amount: "AED 1,350", note: "Touch-up within one month: AED 100" },
+          book: { label: "Book microblading", msg: "Hi! I want to book new microblading" } },
+        { id: "nanoblading", name: "Nanoblading", lead: "Ultra-fine strokes for soft, natural brows: a gentle first step into permanent brows.",
+          photos: [
+            { src: "photos/nanoblading-1.jpg", alt: "Soft nanoblading brows, natural hair-like strokes" },
+            { src: "photos/nanoblading-2.jpg", alt: "Nanoblading before and after: before on top, after below" },
+            { src: "photos/nanoblading-3.jpg", alt: "Nanoblading brows with ultra-fine strokes" } ],
+          caption: "Nanoblading results from my studio",
+          text: "Nanoblading uses a very fine needle to add delicate, hair-like strokes that blend with your own brow hairs, for a soft, natural, no-makeup look.",
+          points: [
+            { t: "Ultra-fine needle", d: "Very delicate strokes that blend with your natural hairs." },
+            { t: "Fewer strokes", d: "Fewer strokes are added than with microblading, just enough to define your brows." },
+            { t: "Very superficial", d: "The work stays close to the surface of the skin, so it lasts a shorter time than microblading." },
+            { t: "Ideal for first-timers", d: "Perfect if it's your first time, or if your brows have only a few gaps." } ],
+          price: { amount: "AED 1,350", note: "Touch-up within one month: AED 100" },
+          book: { label: "Book nanoblading", msg: "Hi! I want to book nanoblading" } },
+        { id: "cover-up", name: "Brow cover-up", lead: "Free yourself from drawing on your brows for a long time, with fuller brows that look completely natural.",
+          photos: [
+            { src: "photos/cover-up-1.jpg", alt: "Old faded brow tattoo covered with microblading, before and after" },
+            { src: "photos/cover-up-2.jpg", alt: "Old purple-toned brows covered with natural hair strokes" },
+            { src: "photos/cover-up-3.jpg", alt: "Faded reddish brows refreshed with a cover-up" },
+            { src: "photos/cover-up-4.jpg", alt: "Old brow work covered for a softer, fuller shape" },
+            { src: "photos/cover-up-5.jpg", alt: "Brow cover-up with a fuller, defined shape" },
+            { src: "photos/cover-up-6.jpg", alt: "Faded brows before and after a cover-up" },
+            { src: "photos/cover-up-7.jpg", alt: "Uneven old brows covered with even hair strokes" },
+            { src: "photos/cover-up-8.jpg", alt: "Old brow work refreshed with a cover-up" },
+            { src: "photos/cover-up-9.jpg", alt: "Close-up of a brow before and after a cover-up" } ],
+          caption: "Real cover-up results from my studio. In each photo: before on top, after below.",
+          sub: "Old brows turned blue, red or grey?",
+          swatches: [ { t: "Blue", c: "#56708c" }, { t: "Red", c: "#a4574c" }, { t: "Grey", c: "#807d78" } ],
+          text: [ "Laser removal is a long and difficult process, and many people would rather not go through it.",
+                  "When old brow work has faded over time, I can cover it with the microblading technique: drawing new hair strokes and choosing the right colour to blend over the old pigment." ],
+          points: [
+            { t: "No laser, no removal", d: "Your old work is covered with fine, natural hair strokes." },
+            { t: "Lasts 1 to 1.5 years", d: "Thanks to mineral pigments, depending on your skin type." },
+            { t: "Soft, never dark", d: "Mineral pigments fade gradually after some months, so you won't need removal in the future." },
+            { t: "About one hour", d: "for a cover-up session." } ],
+          price: { amount: "AED 1,800", note: "Old or discoloured brows · about 1 hour" },
+          notice: { title: "Please send a photo before booking", text: "A cover-up isn't possible for everyone, so a clear photo of your brows is needed first. I'll check it personally and tell you what we can do.", label: "Send a photo on WhatsApp", msg: "Hi! I want to book cover up microblading. Here is a photo of my brows:" } },
+        { id: "powder-brows", name: "Powder brows", lead: "A soft, shaded finish for fuller, defined brows.",
+          text: "Powder brows give a soft, powdered look, like a light brow makeup, fuller than hair strokes. A good choice for oily skin, very sparse brows, or if you like a defined, filled-in shape.",
+          price: { amount: "AED 2,000" },
+          book: { label: "Book powder brows", msg: "Hi! I want to book powder brows" } },
+        { id: "lamination", name: "Brow lamination & shaping", lead: "Lifted, wider-looking brows, beautifully groomed for about two months.",
+          photos: [
+            { src: "photos/lamination-1.jpg", alt: "Laminated brow, lifted and set in place" },
+            { src: "photos/lamination-2.jpg", alt: "Eyebrow lamination result with wider, fuller-looking brows" } ],
+          text: "Lamination lifts and sets your brow hairs in place, so your brows look wider, fuller and beautifully groomed. Shaping finishes the look with a clean, balanced line.",
+          points: [
+            { t: "Lifted, wider-looking brows" },
+            { t: "Lasts about 2 months" },
+            { t: "Easy to keep", d: "After each wash, while your brows are still damp, comb them into shape and let them dry. They'll set that way." } ],
+          price: { amount: "AED 350", note: "Brow shaping AED 100 · Brow tint AED 100" },
+          book: { label: "Book brow lamination", msg: "Hi! I want to book brow lamination" } }
+      ] },
+    { id: "lips", title: "Lips", intro: "A soft tint that keeps your lips fresh and beautifully coloured, even without makeup.",
+      services: [
+        { id: "lip-blush", name: "Lip blush", lead: "Fresh, healthy, beautifully coloured lips every day.",
+          photos: [
+            { src: "photos/lip-blush-1.jpg", alt: "Fresh pink lip blush, glossy close-up" },
+            { src: "photos/lip-blush-2.jpg", alt: "Lip blush before and after: from dark lips to a fresh pink tone" },
+            { src: "photos/lip-blush-3.jpg", alt: "Soft red lip blush close-up" },
+            { src: "photos/lip-blush-4.jpg", alt: "Natural rosy lip blush, side view" },
+            { src: "photos/lip-blush-5.jpg", alt: "Natural rose lip blush close-up" },
+            { src: "photos/lip-blush-6.jpg", alt: "Glossy coral lip blush close-up" },
+            { src: "photos/lip-blush-7.jpg", alt: "Berry-toned lip blush with a defined shape" } ],
+          caption: "Lip blush results from my studio",
+          text: "Lip blush is a delicate tint for the lips that looks very soft and natural. It's made especially for women who don't enjoy wearing makeup, but want their lips to look fresh, healthy and beautifully coloured every day.",
+          points: [
+            { t: "Natural tint", d: "The colour is matched to your skin tone and natural lip colour, so it never looks done." },
+            { t: "Lasts about 1.5 years", d: "Mineral pigments for soft, long-lasting colour." },
+            { t: "Painless", d: "A calm, comfortable session from start to finish." },
+            { t: "No swelling", d: "Your lips keep their natural size and shape." } ],
+          price: { amount: "AED 1,800", note: "Mineral pigments" },
+          book: { label: "Book lip blush", msg: "Hi! I want to book lip blush" } }
+      ] },
+    { id: "eyes", title: "Eyes", intro: "Defined eyes and fuller-looking lashes, with nothing to draw on in the morning.",
+      services: [
+        { id: "lash-line", name: "Lash line", lead: "Fuller-looking lashes and beautifully defined eyes, with no need to draw eyeliner every morning.",
+          photos: [
+            { src: "photos/lash-line-1.jpg", alt: "Upper lash line, close-up of both eyes", cap: "Upper lash line" },
+            { src: "photos/lash-line-2.jpg", alt: "Upper lash line close-up with fuller-looking lashes", cap: "Upper lash line" },
+            { src: "photos/lash-line-3.jpg", alt: "Soft upper lash line, natural result", cap: "Upper lash line" },
+            { src: "photos/lash-line-4.jpg", alt: "Lower lash line close-up", cap: "Lower lash line" },
+            { src: "photos/lash-line-5.jpg", alt: "Upper and lower lash line together", cap: "Upper and lower" } ],
+          caption: "Lash line results from my studio",
+          text: "Lash line enhancement places fine pigment within your lash line, so it looks completely natural: like fuller lashes, not makeup. You can choose the upper line, the lower line, or both.",
+          points: [
+            { t: "Safe and gentle", d: "Many people are nervous about it, but it's a safe, gentle procedure. Most of my clients tell me they felt no pain at all." },
+            { t: "Fuller lashes, defined eyes", d: "The fine line drawn within your lashes gives your eyes a beautiful shape and makes your lashes look fuller." },
+            { t: "About one hour", d: "for a lash line session." },
+            { t: "Lasts up to 1.5 years", d: "Mineral pigments fade gradually over time, so there's no need for removal or a yearly top-up." } ],
+          price: { amount: "AED 1,200", note: "Upper lash line · lower lash line AED 1,200" },
+          book: { label: "Book lash line", msg: "Hi! I want to book lash line enhancement" } },
+        { id: "lash-lift", name: "Lash lift", lead: "Your own lashes, curled and lifted from the root.",
+          photos: [
+            { src: "photos/lash-lift-1.jpg", alt: "Lash lift with lifted natural lashes" },
+            { src: "photos/lash-lift-2.jpg", alt: "Lash lift close-up, curled from the root" } ],
+          text: "A lash lift curls and lifts your own lashes from the root, so they look longer, open up your eyes and really show, without extensions.",
+          price: { amount: "AED 350", note: "Lash lift & lamination" },
+          book: { label: "Book lash lift", msg: "Hi! I want to book lash lift and lamination" } }
+      ] },
+    { id: "extras", title: "Extras", intro: "Small touches, placed exactly where you'd like them.",
+      services: [
+        { id: "beauty-spot", name: "Beauty spot", lead: "A small, natural-looking beauty spot.",
+          photos: [ { src: "photos/beauty-spot-1.jpg", alt: "Small natural-looking beauty spot" } ],
+          text: "A small, natural-looking beauty spot, placed exactly where you'd like it. For everyone who loves the look.",
+          price: { amount: "AED 100" },
+          book: { label: "Book a beauty spot", msg: "Hi! I want to book a beauty spot" } }
+      ] }
+  ],
+  priceList: [
+    { group: "Brows", items: [
+      { name: "New microblading", note: "Lasts 1 to 1.5 years", price: "1,350", msg: "Hi! I want to book new microblading" },
+      { name: "Nanoblading", note: "Ultra-fine strokes, ideal for first-timers", price: "1,350", msg: "Hi! I want to book nanoblading" },
+      { name: "Microblading cover-up", note: "Old or discoloured brows · about 1 hour", price: "1,800", msg: "Hi! I want to book cover up microblading" },
+      { name: "Powder brows", price: "2,000", msg: "Hi! I want to book powder brows" },
+      { name: "Brow lamination", price: "350", msg: "Hi! I want to book brow lamination" },
+      { name: "Brow shaping", price: "100", msg: "Hi! I want to book brow shaping" },
+      { name: "Brow tint", price: "100", msg: "Hi! I want to book brow tint" } ] },
+    { group: "Lips", items: [
+      { name: "Lip blush", note: "Mineral pigments", price: "1,800", msg: "Hi! I want to book lip blush" } ] },
+    { group: "Eyes", items: [
+      { name: "Lash line enhancement", price: "1,200", msg: "Hi! I want to book lash line enhancement" },
+      { name: "Lower lash line enhancement", price: "1,200", msg: "Hi! I want to book lower lash line enhancement" },
+      { name: "Lash lift & lamination", price: "350", msg: "Hi! I want to book lash lift and lamination" } ] },
+    { group: "Extras", items: [
+      { name: "Beauty spot", price: "100", msg: "Hi! I want to book a beauty spot" } ] }
+  ],
+  priceNote: "All prices in AED. Touch-up within one month of your session: AED 100."
 };
 /* ========================================== */
 
-const waLink = m => "https://wa.me/" + SITE.whatsapp + "?text=" + encodeURIComponent(m || SITE.whatsappMessage);
-document.querySelectorAll("[data-wa]").forEach(a => { a.href = waLink(a.dataset.waMsg); a.target = "_blank"; a.rel = "noopener"; });
+const wa = m => "https://wa.me/" + SITE.whatsapp + "?text=" + encodeURIComponent(m || SITE.whatsappMessage);
+const waBtn = (label, msg, cls) => '<a class="btn btn-wa' + (cls || "") + '" href="' + wa(msg) + '" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>' + label + '</a>';
+document.querySelectorAll("[data-wa]").forEach(a => { a.href = wa(a.dataset.waMsg); a.target = "_blank"; a.rel = "noopener"; });
 document.querySelectorAll("[data-ig]").forEach(a => { a.href = "https://instagram.com/" + SITE.instagram; a.target = "_blank"; a.rel = "noopener"; });
 document.querySelectorAll("[data-ig-handle]").forEach(el => el.textContent = "@" + SITE.instagram);
 document.getElementById("year").textContent = new Date().getFullYear();
 
-const ph = (label, v, img, pos) => img
-  ? '<img class="ph" src="' + img + '" alt="' + label + '" loading="lazy"' + (pos ? ' style="object-position:' + pos + '"' : '') + '>'
-  : '<div class="ph ' + (v || "") + '"><div><svg><use href="#i-cam"/></svg><span>' + label + '</span></div></div>';
-const star = '<svg><use href="#i-star"/></svg>';
-
-document.getElementById("services-track").innerHTML = SITE.services.map((s, i) =>
-  '<article class="card">' + ph(s.name, "v" + (i % 3 + 1), s.img, s.pos) +
-  '<div class="card-body"><h3>' + s.name + '</h3><p>' + s.desc + '</p>' +
-  '<div class="meta"><span class="price">' + s.price + '</span>' + (s.duration ? '<span class="dur">' + s.duration + '</span>' : '') + '</div>' +
-  '<a class="book" href="' + waLink(s.msg || ("Hello Fariba, I would like to book: " + s.name + ".")) + '" target="_blank" rel="noopener">' + (s.cta || "Book this treatment") + '</a></div></article>'
-).join("");
-
-const statsWrap = document.getElementById("stats-wrap");
-if (SITE.facts.length) statsWrap.innerHTML = SITE.facts.map(f => '<div class="stat"><b>' + f.big + '</b><span>' + f.label + '</span></div>').join("");
+/* highlights */
+if (SITE.facts.length) document.getElementById("stats-wrap").innerHTML = SITE.facts.map(f => '<div class="stat"><b>' + f.big + '</b><span>' + f.label + '</span></div>').join("");
 else document.getElementById("stats").hidden = true;
 
+/* services, by category */
+function serviceHTML(s) {
+  const figs = (s.photos || []).map(p => '<figure><img src="' + p.src + '" alt="' + p.alt + '" loading="lazy">' + (p.cap ? '<figcaption>' + p.cap + '</figcaption>' : '') + '</figure>').join("");
+  const strip = figs ? '<div class="strip-wrap"><div class="strip" aria-label="' + s.name + ' results">' + figs + '</div><div class="dots" aria-hidden="true"></div></div>' + (s.caption ? '<p class="gcap">' + s.caption + '</p>' : '') : "";
+  const sub = s.sub ? '<p class="svc-sub">' + s.sub + '</p>' : "";
+  const swatch = s.swatches ? '<div class="swatch">' + s.swatches.map(w => '<span style="--c:' + w.c + '">' + w.t + '</span>').join("") + '</div>' : "";
+  const paras = (Array.isArray(s.text) ? s.text : [s.text]).map(t => '<p class="svc-text">' + t + '</p>').join("");
+  const pts = (s.points || []).map(p => '<div class="pt"><b>' + p.t + '</b>' + (p.d ? '<span>' + p.d + '</span>' : '') + '</div>').join("");
+  const price = s.price ? '<div class="price">' + s.price.amount + (s.price.note ? '<small>' + s.price.note + '</small>' : '') + '</div>' : "";
+  const notice = s.notice ? '<div class="notice"><b>' + s.notice.title + '</b><p>' + s.notice.text + '</p>' + waBtn(s.notice.label, s.notice.msg) + '</div>' : "";
+  const foot = '<div class="svc-foot">' + price + (s.book ? waBtn(s.book.label, s.book.msg) : '') + '</div>';
+  return '<article class="svc" id="' + s.id + '" data-reveal><div class="svc-head"><h3>' + s.name + '</h3>' + (s.lead ? '<p class="lead">' + s.lead + '</p>' : '') + '</div>' +
+    strip + '<div class="svc-body">' + sub + swatch + paras + (pts ? '<div class="pts">' + pts + '</div>' : '') + notice + foot + '</div></article>';
+}
+document.getElementById("categories").innerHTML = SITE.categories.map((c, i) =>
+  '<section class="cat' + (i % 2 ? ' alt' : '') + '" id="' + c.id + '"><div class="wrap">' +
+  '<div class="cat-head" data-reveal><p class="eyebrow">Category · 0' + (i + 1) + '</p><h2>' + c.title + '</h2><p>' + c.intro + '</p></div>' +
+  c.services.map(serviceHTML).join("") + '</div></section>').join("");
+
+/* price list */
+document.getElementById("price-cols").innerHTML = SITE.priceList.map(g =>
+  '<div class="grp"><h3>' + g.group + '</h3>' + g.items.map(it =>
+    '<a class="row" href="' + wa(it.msg) + '" target="_blank" rel="noopener"><span class="nm">' + it.name + (it.note ? '<small>' + it.note + '</small>' : '') + '</span><i class="lead-dots" aria-hidden="true"></i><span class="pr"><span>AED</span>' + it.price + '</span></a>').join("") + '</div>').join("");
+document.getElementById("price-note").textContent = SITE.priceNote;
+
+/* reviews */
 if (!SITE.reviews.length) {
   document.getElementById("reviews").hidden = true;
-  const navLink = document.querySelector('.nav a[href="#reviews"]'); if (navLink) navLink.remove();
+} else {
+  const star = '<svg><use href="#i-star"/></svg>';
+  document.getElementById("reviews-track").innerHTML = SITE.reviews.map(r =>
+    '<article class="review"><div class="stars" aria-label="5 out of 5 stars">' + star.repeat(5) + '</div>' +
+    '<blockquote>“' + r.text + '”</blockquote>' +
+    '<footer><div class="avatar">' + r.name.charAt(0) + '</div><div><b>' + r.name + '</b><br><span>via ' + r.source + '</span></div></footer></article>').join("");
 }
-document.getElementById("reviews-track").innerHTML = SITE.reviews.map(r =>
-  '<article class="review"><div class="stars" aria-label="5 out of 5 stars">' + star.repeat(5) + '</div>' +
-  '<blockquote>“' + r.text + '”</blockquote>' +
-  '<footer><div class="avatar">' + r.name.charAt(0) + '</div><div><b>' + r.name + '</b><br><span>via ' + r.source + '</span></div></footer></article>'
-).join("");
 
-/* auto-moving carousel: advances by itself, pauses while you touch or hover, loops back to the start */
+/* photo strips and the reviews row move by themselves, pause while you touch or hover, and loop back to the start */
 function carousel(track, dots, every) {
   const items = Array.from(track.children);
-  if (!items.length) return;
-  const step = () => items[0].getBoundingClientRect().width + (parseFloat(getComputedStyle(track).columnGap) || 0);
+  if (items.length < 2) { if (dots) dots.remove(); return; }
+  const pad = () => parseFloat(getComputedStyle(track).paddingLeft) || 0;
+  const positions = () => { const t = track.getBoundingClientRect().left, s = track.scrollLeft, p = pad(); return items.map(el => el.getBoundingClientRect().left - t + s - p); };
   if (dots) dots.innerHTML = items.map(() => "<i></i>").join("");
   const mark = () => {
     if (!dots) return;
-    const i = Math.min(items.length - 1, Math.round(track.scrollLeft / step()));
+    const pos = positions(); let i = 0;
+    pos.forEach((p, k) => { if (Math.abs(p - track.scrollLeft) < Math.abs(pos[i] - track.scrollLeft)) i = k; });
     Array.from(dots.children).forEach((d, k) => d.classList.toggle("on", k === i));
   };
   mark();
@@ -387,11 +615,12 @@ function carousel(track, dots, every) {
   setInterval(() => {
     if (paused || document.hidden) return;
     const max = track.scrollWidth - track.clientWidth;
-    if (track.scrollLeft >= max - 4) track.scrollTo({ left: 0, behavior: "smooth" });
-    else track.scrollBy({ left: step(), behavior: "smooth" });
+    if (track.scrollLeft >= max - 4) { track.scrollTo({ left: 0, behavior: "smooth" }); return; }
+    const next = positions().find(p => p > track.scrollLeft + 4);
+    track.scrollTo({ left: next === undefined ? 0 : Math.min(next, max), behavior: "smooth" });
   }, every);
 }
-carousel(document.getElementById("services-track"), document.getElementById("services-dots"), 3500);
+document.querySelectorAll(".strip").forEach(st => carousel(st, st.parentElement.querySelector(".dots"), 4200));
 carousel(document.getElementById("reviews-track"), document.getElementById("reviews-dots"), 4500);
 
 /* soft reveal of blocks as they scroll into view */

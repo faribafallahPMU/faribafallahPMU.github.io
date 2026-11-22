@@ -1,7 +1,8 @@
 # Fariba Fallah – website
 
-A one-page, mobile-first website to link from Instagram. Visitors see photos, a short bio, the services with prices
-(auto-moving carousel), client reviews, and a floating **Book now** button that opens WhatsApp.
+A one-page, mobile-first website to link from Instagram. Visitors see photos, a short bio, the services grouped by
+category (Brows, Lips, Eyes, Extras) with an explanation, photos and a price for each, a price list, how to book,
+aftercare, and a floating **Book now** button that opens WhatsApp.
 
 ## What is in this folder
 
@@ -15,33 +16,28 @@ A one-page, mobile-first website to link from Instagram. Visitors see photos, a 
 
 Double-click `index.html` to open the site in your browser. Make the window narrow to see the phone version.
 
-Design decisions so far: one "Book now" button only, floating at the bottom right (the header has none);
-every service card and the cover-up section open WhatsApp with a ready-made message; a "Cover-up, step by step"
-section explains the photo-check-first flow from the ads.
+Design decisions so far: Dark Luxe colours and shapes; no buttons under the name at the top, only small text links to
+the categories; every booking button is WhatsApp green and opens WhatsApp with a ready-made message; the cover-up
+block asks for a photo first; location shown as "Dubai Media City" only.
 
-## What is real and what is still an example
+## Where the content comes from
 
-Real, taken from your photos and your Instagram ads: the profession (permanent makeup artist), Dubai Media City and
-free parking, the Instagram handle `@fariba.fallahpmu`, the cover-up price of 1,800 AED and its
-"send a photo first, then we book" flow.
-
-Still missing (hidden or shown as "price on request" until provided): the WhatsApp number, every other price,
-the highlights row, the reviews, the opening hours and the bio details.
+All texts, prices, aftercare steps and work photos come from the page you wrote earlier in a claude.ai chat
+(artifact "Fariba Fallah PMU"), restyled in the Dark Luxe design. Only the "Powder brows" explanation was written here,
+since the artifact listed it with a price but no description. Client reviews are still hidden until you provide some.
 
 ## Photos used
 
-| File in `photos/` | Comes from | Used for |
-|---|---|---|
-| `portrait.jpg` | IMG_7851 (café, lipstick) | Main photo at the top |
-| `about-1.jpg` | IMG_7849 (laptop at the café) | About section |
-| `about-2.jpg` | IMG_7850 (mirror photo) | About section, small photo |
-| `microblading.jpg` | IMG_7845, "after" half | Microblading card |
-| `powder-brows.jpg` | IMG_7846, "after" half | Powder brows card |
-| `lip-blush.jpg` | Close-up of brows and lips, cropped to the lips | Lip blush card |
-| `cover-up.jpg` | IMG_7845, before and after stacked | Cover-up card |
-| `before-after-1.jpg`, `before-after-2.jpg` | IMG_7845, IMG_7846 | Gallery |
-| `brows-lips.jpg` | Close-up of brows and lips | Gallery |
-| `lash-lift.jpg`, `lash-lift-2.jpg`, `brow-lamination.jpg` | IMG_2307, IMG_5346, IMG_3923 | Lash lift and brow lamination cards, gallery |
+| File in `photos/` | Used for |
+|---|---|
+| `portrait.jpg` | Main photo at the top (café, lipstick) |
+| `about-1.jpg` | About section (laptop at the café) |
+| `microblading-1..3.jpg`, `nanoblading-1..3.jpg` | Brows: microblading and nanoblading strips |
+| `cover-up-1..9.jpg` | Brows: cover-up strip, before on top and after below |
+| `lamination-1..2.jpg` | Brows: lamination strip |
+| `lip-blush-1..7.jpg` | Lips: lip blush strip |
+| `lash-line-1..5.jpg`, `lash-lift-1..2.jpg` | Eyes: lash line and lash lift strips |
+| `beauty-spot-1.jpg` | Extras: beauty spot |
 
 To change a photo, replace the file in `photos/` and keep the same name, or drop new photos in that folder and say
 which goes where.
@@ -49,8 +45,9 @@ which goes where.
 ## How the content works
 
 At the bottom of `index.html` there is a block that starts with `EDIT YOUR CONTENT HERE`. It holds the WhatsApp
-number, the Instagram handle, the services (name, description, duration, price, photo) and the reviews.
-Changing a price or adding a service only needs a change there.
+number, the Instagram handle, the highlights row, the reviews, the service categories (each service with its texts,
+photos, key points, price and WhatsApp message) and the price list. Changing a price or adding a service only needs
+a change there.
 
 ## The site online
 
