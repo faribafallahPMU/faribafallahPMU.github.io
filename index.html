@@ -92,6 +92,7 @@ section,article{scroll-margin-top:72px}
 .strip::-webkit-scrollbar{display:none}
 .strip figure{flex:none;height:clamp(260px,64vw,360px);aspect-ratio:4/5;border-radius:14px;overflow:hidden;scroll-snap-align:start;position:relative;background:#000}
 .strip img{width:100%;height:100%;object-fit:cover;display:block}
+.strip .src{display:contents}
 .strip figure.ph{background:var(--card);animation:ph 1.4s ease-in-out infinite}
 @keyframes ph{0%,100%{opacity:.45}50%{opacity:1}}
 .strip figcaption{position:absolute;left:10px;bottom:10px;background:rgba(14,13,12,.8);color:var(--gold2);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;padding:5px 10px;border-radius:999px}
@@ -438,17 +439,19 @@ const SITE = {
       ] },
     { id: "eyes", title: "Eyes", intro: "Defined eyes and fuller-looking lashes, with nothing to draw on in the morning.",
       services: [
-        { id: "lash-line", name: "Lash line", lead: "Fuller-looking lashes and beautifully defined eyes, with no need to draw eyeliner every morning.",
-          photos: "carousel/lash-line",
-          caption: "Lash line results from my studio",
-          text: "Lash line enhancement places fine pigment within your lash line, so it looks completely natural: like fuller lashes, not makeup. You can choose the upper line, the lower line, or both.",
+        { id: "lash-line", name: "Lash line", lead: "Fuller-looking lashes and beautifully defined eyes, with no need to draw eyeliner every morning. Upper line, lower line, or both.",
+          // two folders: the photos of each one carry its label in the carousel
+          photos: [ { folder: "carousel/lash-line-upper", label: "Upper lash line" }, { folder: "carousel/lash-line-lower", label: "Lower lash line" } ],
+          caption: "Upper and lower lash line, photographed in my studio",
+          text: "Lash line enhancement places fine pigment within your lash line, so it looks completely natural: like fuller lashes, not makeup. I do both lines: the upper lash line is the classic choice for fuller-looking lashes, the lower lash line defines the eye underneath, and together they frame the whole eye.",
           points: [
+            { t: "Upper, lower or both", d: "Each line is AED 1,200. Choose the upper line, the lower line, or the two together." },
             { t: "Safe and gentle", d: "Many people are nervous about it, but it's a safe, gentle procedure. Most of my clients tell me they felt no pain at all." },
             { t: "Fuller lashes, defined eyes", d: "The fine line drawn within your lashes gives your eyes a beautiful shape and makes your lashes look fuller." },
             { t: "About one hour", d: "for a lash line session." },
             { t: "Lasts up to 1.5 years", d: "Mineral pigments fade gradually over time, so there's no need for removal or a yearly top-up." } ],
-          price: { amount: "AED 1,200", note: "Upper lash line · lower lash line AED 1,200" },
-          book: { label: "Book lash line", msg: "Hi! I want to book lash line enhancement" } },
+          price: { amount: "AED 1,200", note: "Per line: upper AED 1,200 · lower AED 1,200" },
+          book: { label: "Book lash line", msg: "Hi! I want to book lash line enhancement (upper / lower / both)" } },
         { id: "lash-lift", name: "Lash lift", lead: "Your own lashes, curled and lifted from the root.",
           photos: "carousel/lash-lift",
           text: "A lash lift curls and lifts your own lashes from the root, so they look longer, open up your eyes and really show, without extensions.",
@@ -476,7 +479,7 @@ const SITE = {
       { name: "Brow shaping", price: "100", msg: "Hi! I want to book brow shaping" },
       { name: "Brow tint", price: "100", msg: "Hi! I want to book brow tint" } ] },
     { group: "Eyes", items: [
-      { name: "Lash line enhancement", price: "1,200", msg: "Hi! I want to book lash line enhancement" },
+      { name: "Upper lash line enhancement", price: "1,200", msg: "Hi! I want to book upper lash line enhancement" },
       { name: "Lower lash line enhancement", price: "1,200", msg: "Hi! I want to book lower lash line enhancement" },
       { name: "Lash lift & lamination", price: "350", msg: "Hi! I want to book lash lift and lamination" } ] },
     { group: "Other", items: [
@@ -497,7 +500,8 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 /* services, by category */
 function serviceHTML(s) {
-  const strip = s.photos ? '<div class="strip-wrap" data-folder="' + s.photos + '" data-name="' + s.name + '" hidden><div class="strip" aria-label="' + s.name + ' results"></div><div class="dots" aria-hidden="true"></div>' + (s.caption ? '<p class="gcap">' + s.caption + '</p>' : '') + '</div>' : "";
+  const sources = !s.photos ? [] : typeof s.photos === "string" ? [{ folder: s.photos }] : s.photos;
+  const strip = sources.length ? '<div class="strip-wrap" data-sources="' + JSON.stringify(sources).replace(/"/g, "&quot;") + '" data-name="' + s.name + '" hidden><div class="strip" aria-label="' + s.name + ' results"></div><div class="dots" aria-hidden="true"></div>' + (s.caption ? '<p class="gcap">' + s.caption + '</p>' : '') + '</div>' : "";
   const sub = s.sub ? '<p class="svc-sub">' + s.sub + '</p>' : "";
   const swatch = s.swatches ? '<div class="swatch">' + s.swatches.map(w => '<span style="--c:' + w.c + '">' + w.t + '</span>').join("") + '</div>' : "";
   const paras = (Array.isArray(s.text) ? s.text : [s.text]).map(t => '<p class="svc-text">' + t + '</p>').join("");
@@ -531,7 +535,7 @@ if (!SITE.reviews.length) {
 
 /* photo strips and the reviews row move by themselves, pause while you touch or hover, and loop back to the start */
 function carousel(track, dots, every) {
-  const items = Array.from(track.children);
+  const items = Array.from(track.querySelectorAll("figure"));
   if (items.length < 2) { if (dots) dots.remove(); return; }
   const pad = () => parseFloat(getComputedStyle(track).paddingLeft) || 0;
   const positions = () => { const t = track.getBoundingClientRect().left, s = track.scrollLeft, p = pad(); return items.map(el => el.getBoundingClientRect().left - t + s - p); };
@@ -565,24 +569,32 @@ function carousel(track, dots, every) {
 const exists = location.protocol === "file:"
   ? url => new Promise(ok => { const im = new Image(); im.onload = () => ok(true); im.onerror = () => ok(false); im.src = url; })   // opened from the folder (website.html)
   : url => fetch(url, { method: "HEAD" }).then(r => r.ok).catch(() => false);
-document.querySelectorAll(".strip-wrap[data-folder]").forEach(async wrap => {
-  const folder = wrap.dataset.folder, strip = wrap.querySelector(".strip");
-  const fig = (f, i) => '<figure><img src="' + f + '" alt="' + wrap.dataset.name + ', photo ' + (i + 1) + '" loading="lazy"></figure>';
-  strip.innerHTML = '<figure class="ph"></figure>'.repeat(3);   // soft placeholders while the folder is checked
+document.querySelectorAll(".strip-wrap[data-sources]").forEach(async wrap => {
+  const sources = JSON.parse(wrap.dataset.sources), strip = wrap.querySelector(".strip");
+  strip.innerHTML = sources.map(() => '<span class="src"></span>').join("");   // one group per folder, in order
+  const spans = strip.querySelectorAll(".src");
+  spans[0].innerHTML = '<figure class="ph"></figure>'.repeat(3);   // soft placeholders while the folders are checked
   wrap.hidden = false;
-  let shown = 0;
-  for (let start = 1; start <= 48; start += 8) {
-    const nums = Array.from({ length: 8 }, (_, k) => start + k);
-    const ok = await Promise.all(nums.map(n => exists(folder + "/" + n + ".jpg")));
-    const found = nums.filter((n, k) => ok[k]).map(n => folder + "/" + n + ".jpg");
-    if (found.length) {
-      const html = found.map((f, i) => fig(f, shown + i)).join("");
-      if (shown) strip.insertAdjacentHTML("beforeend", html); else strip.innerHTML = html;
-      shown += found.length;
+  let total = 0;
+  await Promise.all(sources.map(async (src, si) => {
+    const span = spans[si];
+    const fig = (f, i) => '<figure><img src="' + f + '" alt="' + wrap.dataset.name + (src.label ? ', ' + src.label.toLowerCase() : '') + ', photo ' + (i + 1) + '" loading="lazy">' + (src.label ? '<figcaption>' + src.label + '</figcaption>' : '') + '</figure>';
+    let shown = 0;
+    for (let start = 1; start <= 48; start += 8) {
+      const nums = Array.from({ length: 8 }, (_, k) => start + k);
+      const ok = await Promise.all(nums.map(n => exists(src.folder + "/" + n + ".jpg")));
+      const found = nums.filter((n, k) => ok[k]).map(n => src.folder + "/" + n + ".jpg");
+      if (found.length) {
+        const html = found.map((f, i) => fig(f, shown + i)).join("");
+        if (shown) span.insertAdjacentHTML("beforeend", html); else span.innerHTML = html;
+        shown += found.length;
+      }
+      if (!ok.slice(4).some(Boolean)) break;   // four empty numbers in a row at the end of the group: the folder ends here
     }
-    if (!ok.slice(4).some(Boolean)) break;   // four empty numbers in a row at the end of the group: the folder ends here
-  }
-  if (!shown) { wrap.remove(); return; }
+    if (!shown) span.innerHTML = "";
+    total += shown;
+  }));
+  if (!total) { wrap.remove(); return; }
   carousel(strip, wrap.querySelector(".dots"), 4200);
 });
 carousel(document.getElementById("reviews-track"), document.getElementById("reviews-dots"), 4500);
