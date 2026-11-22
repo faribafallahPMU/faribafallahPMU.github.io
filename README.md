@@ -7,7 +7,7 @@ A one-page, mobile-first website to link from Instagram. Visitors see photos, a 
 
 | Folder / file | What it is |
 |---|---|
-| `index.html` | **The website** (Dark Luxe design, chosen on 22 Nov 2026). This single file plus the `photos` folder is everything that goes online. |
+| `index.html` | **The website** (Dark Luxe design, chosen on 22 Nov 2026), live at https://faribafallahpmu.github.io. This single file plus the `photos` folder is everything that is online. |
 | `templates/` | The three original proposals (Ivory & Gold, Modern Minimal, Dark Luxe), kept for reference |
 | `previews/` | Full-page screenshots: `index-mobile.png` and `index-desktop.png` are the site, the others are the old proposals |
 | `photos/` | Web-sized copies of the photos used on the page (the originals stay in Downloads) |
@@ -25,8 +25,8 @@ Real, taken from your photos and your Instagram ads: the profession (permanent m
 free parking, the Instagram handle `@fariba.fallahpmu`, the cover-up price of 1,800 AED and its
 "send a photo first, then we book" flow.
 
-Examples to replace: the WhatsApp number, every other price, the bio text, the "8+ years · 1,200+ clients · 5.0"
-row, the reviews and the opening hours.
+Still missing (hidden or shown as "price on request" until provided): the WhatsApp number, every other price,
+the highlights row, the reviews, the opening hours and the bio details.
 
 ## Photos used
 
@@ -52,28 +52,22 @@ At the bottom of `index.html` there is a block that starts with `EDIT YOUR CONTE
 number, the Instagram handle, the services (name, description, duration, price, photo) and the reviews.
 Changing a price or adding a service only needs a change there.
 
-## Going online, step by step
+## The site online
 
-1. Create a free GitHub account at github.com/signup (in Safari or Chrome). Choose the username **faribafallah**
-   if it is free: the site address becomes `https://faribafallah.github.io`. If it is taken, use `fariba-fallah`
-   (address `https://fariba-fallah.github.io`). Pick the Free plan and confirm the email they send you.
-2. Run the one-line command Claude gives you in the terminal. It creates a key on this Mac; copy the text it prints.
-3. Add that key to the account, so the site can be updated from here without passwords:
-   GitHub → profile picture → Settings → SSH and GPG keys → New SSH key → paste the text → Add SSH key.
-4. Create the repository: GitHub → + (top right) → New repository → name it exactly `faribafallah.github.io`
-   (your username followed by `.github.io`) → Public → Create repository.
-5. Say "done" in the chat. Claude publishes the site, and the address works a minute or two later.
+The site is live at **https://faribafallahpmu.github.io** (GitHub account `faribafallahPMU`, repository
+`faribafallahPMU.github.io`, published by GitHub Pages from the `main` branch, HTTPS enforced). It was uploaded
+through GitHub's website on 22 Nov 2026 from a logged-in Chrome; no key or password is stored on this Mac.
 
-## Putting it online for free
+To update the site: change `index.html` or a photo here, then either upload the changed file again through
+GitHub's website (Add file → Upload files, same name replaces the old one) or set up the one-time SSH key from
+the command below so updates can be pushed directly from this folder.
 
-The address `fariba.fallah` is not possible: a web address must end with a real extension such as `.com` or `.ae`,
-and `.fallah` does not exist. Free options that keep the name:
+The address `fariba.fallah` is not possible: a web address must end with a real extension such as `.com` or `.ae`.
+A real domain such as `faribafallah.com` costs about 10–15 € per year and can be connected to the GitHub Pages
+site later (Settings → Pages → Custom domain) without changing anything else.
 
-| Option | Address | Notes |
-|---|---|---|
-| GitHub Pages (recommended) | `https://faribafallah.github.io` | Free, reliable, no ads. Needs a free GitHub account. |
-| Netlify | `https://fariba-fallah.netlify.app` | Free, drag-and-drop upload. |
-| Vercel | `https://fariba-fallah.vercel.app` | Free, similar to Netlify. |
+One-time key setup (optional, run in the terminal, then add the printed line to GitHub → Settings → SSH and GPG keys):
 
-A real domain such as `faribafallah.com` costs about 10–15 € per year and can be connected to any of these later
-without changing the site.
+```
+mkdir -p ~/.ssh && chmod 700 ~/.ssh && ssh-keygen -t ed25519 -N "" -C "fariba-website" -f ~/.ssh/id_ed25519_github && printf '\nHost github.com\n  IdentityFile ~/.ssh/id_ed25519_github\n  IdentitiesOnly yes\n' >> ~/.ssh/config && ssh-keyscan -t ed25519 github.com >> ~/.ssh/known_hosts 2>/dev/null && cat ~/.ssh/id_ed25519_github.pub
+```
