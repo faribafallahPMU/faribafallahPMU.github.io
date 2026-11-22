@@ -11,7 +11,9 @@ aftercare, and a floating **Book now** button that opens WhatsApp.
 | `index.html` | **The website** (Dark Luxe design, chosen on 22 Nov 2026), live at https://faribafallahpmu.github.io. This single file plus the `photos` folder is everything that is online. |
 | `templates/` | The three original proposals (Ivory & Gold, Modern Minimal, Dark Luxe), kept for reference |
 | `previews/` | Full-page screenshots: `index-mobile.png` and `index-desktop.png` are the site, the others are the old proposals |
-| `photos/` | Web-sized copies of the photos used on the page (the originals stay in Downloads) |
+| `photos/` | Web-sized copies of the two portraits used on the page (top and About) |
+| `carousel/` | The carousel photos, one folder per service, `1.jpg`, `2.jpg` … (see `carousel/README.md`) |
+| `Added from fariba/` | Your original photos as you gave them on 22 Nov 2026 (iPhone HEIC, PNG, JPG). Not published; the site uses the converted copies in `carousel/` and `photos/`. |
 | `content-checklist.md` | What is still missing to finish the site |
 
 Double-click `index.html` to open the site in your browser. Make the window narrow to see the phone version.
@@ -29,6 +31,9 @@ since the artifact listed it with a price but no description. Client reviews are
 ## Photos
 
 - `photos/portrait.jpg` is the main photo at the top, `photos/about-1.jpg` the one in the About section.
+- Every carousel photo was converted to a 960×1200 JPG (4:5 portrait) and the page shows all of them in that same
+  frame (centre crop), so new photos of any shape look uniform too. Two photos were rotated upright and the
+  nanoblading before/after collage was re-aligned.
 - The carousels take their photos from `carousel/<service>/`, one folder per service, named `1.jpg`, `2.jpg`,
   `3.jpg` … and shown in that order. Add `8.jpg` to add a photo, upload a file with the same name to replace one,
   delete a file to remove one. The full rule is in `carousel/README.md` (also on GitHub when you open that folder).

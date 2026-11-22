@@ -97,8 +97,8 @@ section,article{scroll-margin-top:72px}
 .strip-wrap{margin-top:22px}
 .strip{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:22px;padding:0 22px 14px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .strip::-webkit-scrollbar{display:none}
-.strip figure{flex:none;height:clamp(260px,64vw,360px);border-radius:14px;overflow:hidden;scroll-snap-align:start;position:relative;background:#000}
-.strip img{height:100%;width:auto}
+.strip figure{flex:none;height:clamp(260px,64vw,360px);aspect-ratio:4/5;border-radius:14px;overflow:hidden;scroll-snap-align:start;position:relative;background:#000}
+.strip img{width:100%;height:100%;object-fit:cover;display:block}
 .strip figcaption{position:absolute;left:10px;bottom:10px;background:rgba(14,13,12,.8);color:var(--gold2);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;padding:5px 10px;border-radius:999px}
 .dots{display:flex;gap:6px;justify-content:center;margin-top:2px}
 .dots i{width:6px;height:6px;border-radius:999px;background:#2f2a26;transition:all .3s}
@@ -165,7 +165,7 @@ details li::before{content:"";position:absolute;left:3px;top:19px;width:7px;heig
 details li b{display:block;color:var(--ink);font-weight:500}
 
 /* reviews (shown only when there are some) */
-.reviews{padding:76px 0;border-bottom:1px solid var(--line)}
+.reviews{padding:76px 0;border-top:1px solid var(--line)}
 .track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:20px;padding:6px 20px 22px;margin:0 -20px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .track::-webkit-scrollbar{display:none}
 .review{flex:0 0 min(84vw,380px);scroll-snap-align:start;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column}
@@ -349,14 +349,6 @@ html.js [data-reveal].in{opacity:1;transform:none}
   </div>
 </section>
 
-<section class="reviews" id="reviews">
-  <div class="wrap">
-    <div class="sec-head" data-reveal><p class="eyebrow">Testimonials</p><h2>Kind words</h2><p>From clients on Instagram and Google</p></div>
-    <div class="track" id="reviews-track" aria-label="Client reviews"></div>
-    <div class="dots" id="reviews-dots" aria-hidden="true"></div>
-  </div>
-</section>
-
 <section class="contact" id="contact">
   <div class="wrap">
     <div class="box" data-reveal>
@@ -371,6 +363,14 @@ html.js [data-reveal].in{opacity:1;transform:none}
       <div data-reveal><svg><use href="#i-phone"/></svg><b>WhatsApp</b><a class="u" data-wa href="#"><span>050 648 2550</span></a></div>
       <div data-reveal><svg><use href="#i-ig"/></svg><b>Instagram</b><a class="u" data-ig href="#"><span data-ig-handle>@fariba.fallahpmu</span></a><br><span>More of my work and client reviews</span></div>
     </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="sec-head" data-reveal><p class="eyebrow">Testimonials</p><h2>Kind words</h2><p>From clients on Instagram and Google</p></div>
+    <div class="track" id="reviews-track" aria-label="Client reviews"></div>
+    <div class="dots" id="reviews-dots" aria-hidden="true"></div>
   </div>
 </section>
 </main>
