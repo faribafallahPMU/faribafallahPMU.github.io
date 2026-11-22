@@ -566,9 +566,10 @@ function carousel(track, dots, every) {
 }
 /* each carousel shows the photos of its folder: 1.jpg, 2.jpg, 3.jpg ... in that order (add 8.jpg to add a photo).
    Eight numbers are checked at the same time and the photos appear as soon as they are found. */
+const head = url => fetch(url, { method: "HEAD" }).then(r => r.ok ? true : r.status >= 500 ? null : false).catch(() => null);   // null = server hiccup, worth one retry
 const exists = location.protocol === "file:"
   ? url => new Promise(ok => { const im = new Image(); im.onload = () => ok(true); im.onerror = () => ok(false); im.src = url; })   // opened from the folder (website.html)
-  : url => fetch(url, { method: "HEAD" }).then(r => r.ok).catch(() => false);
+  : async url => { let r = await head(url); if (r === null) { await new Promise(w => setTimeout(w, 900)); r = await head(url); } return r === true; };
 document.querySelectorAll(".strip-wrap[data-sources]").forEach(async wrap => {
   const sources = JSON.parse(wrap.dataset.sources), strip = wrap.querySelector(".strip");
   strip.innerHTML = sources.map(() => '<span class="src"></span>').join("");   // one group per folder, in order
