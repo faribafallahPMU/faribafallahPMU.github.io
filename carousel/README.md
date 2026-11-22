@@ -9,6 +9,9 @@ order, from 1 up. That is the whole rule.
   stops looking after four empty numbers in a row.
 - **Change the order**: rename the files so the numbers follow the order you want.
 - Only `.jpg` files, lowercase, numbers only, no spaces. A folder with no photos simply shows no carousel.
+- **Format**: every photo is shown in the same 4:5 portrait frame (like an Instagram portrait post), cropped from the
+  centre, so portrait, square and landscape photos all work. Best result: a 4:5 portrait photo with no text on it.
+- From an iPhone, share the photo as JPEG (a `.HEIC` file is not shown).
 - Photos appear on the site a minute or two after the upload.
 
 | Folder | Service |
@@ -17,7 +20,7 @@ order, from 1 up. That is the whole rule.
 | `microblading` | Microblading |
 | `nanoblading` | Nanoblading |
 | `cover-up` | Brow cover-up (before on top, after below) |
-| `powder-brows` | Powder brows (empty for now) |
+| `powder-brows` | Powder brows |
 | `lamination` | Brow lamination & shaping |
 | `lash-line` | Lash line |
 | `lash-lift` | Lash lift |
@@ -27,5 +30,6 @@ order, from 1 up. That is the whole rule.
 
 Un dossier par service. Dedans, les photos s'appellent **1.jpg, 2.jpg, 3.jpg …** et le site les affiche dans cet ordre.
 Pour ajouter une photo : mets-la dans le bon dossier avec le numéro suivant. Pour la remplacer : même nom.
-Pour la retirer : supprime le fichier. Seulement des `.jpg`, en minuscules, sans espaces. Les changements sont en
+Pour la retirer : supprime le fichier. Seulement des `.jpg`, en minuscules, sans espaces. Toutes les photos sont
+affichées dans le même cadre portrait 4:5 (recadrage au centre) : l'idéal est une photo portrait 4:5 sans texte dessus. Les changements sont en
 ligne une ou deux minutes après.
