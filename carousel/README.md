@@ -22,7 +22,8 @@ order, from 1 up. That is the whole rule.
 | `cover-up` | Brow cover-up (before on top, after below) |
 | `powder-brows` | Powder brows |
 | `lamination` | Brow lamination & shaping |
-| `lash-line` | Lash line |
+| `lash-line-upper` | Lash line, upper (its photos show the label "Upper lash line") |
+| `lash-line-lower` | Lash line, lower (label "Lower lash line") |
 | `lash-lift` | Lash lift |
 | `beauty-spot` | Beauty spot |
 
