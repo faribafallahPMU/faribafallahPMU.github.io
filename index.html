@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fariba Fallah · Permanent Makeup Artist in Dubai</title>
+<meta name="description" content="Fariba Fallah – refined permanent makeup: microblading, powder brows, lip blush and cover-ups in a private studio. Services, prices, reviews and WhatsApp booking.">
+<meta name="theme-color" content="#0e0d0c">
+<meta property="og:title" content="Fariba Fallah · Permanent Makeup Artist in Dubai">
+<meta property="og:description" content="Refined beauty, by appointment. Book on WhatsApp.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230e0d0c'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-style='italic' text-anchor='middle' fill='%23d2b06f'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0e0d0c;--bg2:#141211;--card:#1a1816;--line:#2a2623;--ink:#efe8dc;--muted:#a0978a;
+  --gold:#d2b06f;--gold2:#ecd49c;--wa:#25D366;
+  --serif:"Playfair Display",Georgia,"Times New Roman",serif;--sans:"Montserrat",system-ui,-apple-system,sans-serif;
+  --r:16px;--max:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;line-height:1.7;font-size:15.5px}
+a{color:inherit;text-decoration:none}
+svg{display:block}
+.wrap{width:min(100% - 40px,var(--max));margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.08}
+section{scroll-margin-top:66px}
+.eyebrow{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 22px;border-radius:999px;font-weight:600;font-size:14px;letter-spacing:.04em;white-space:nowrap;transition:transform .2s ease,box-shadow .2s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn svg{width:18px;height:18px;flex:none;fill:currentColor}
+.btn-gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1b1507;box-shadow:0 14px 30px -12px rgba(210,176,111,.6)}
+.btn-outline{border:1px solid rgba(210,176,111,.45);color:var(--gold2)}
+
+/* photo placeholders – replaced by real photos later */
+.ph{position:relative;overflow:hidden;background:linear-gradient(135deg,#2b2622,#1d1a17 55%,#171412);display:grid;place-items:center;color:rgba(236,212,156,.5);aspect-ratio:4/5;border:1px solid rgba(210,176,111,.18)}
+.ph::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 15%,rgba(236,212,156,.14),transparent 50%)}
+.ph>div{position:relative;z-index:1;display:grid;place-items:center;gap:6px;text-align:center;padding:12px}
+.ph svg{width:28px;height:28px}
+.ph span{font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.ph.v2{background:linear-gradient(135deg,#2e2721,#1f1a16 55%,#171310)}
+.ph.v3{background:linear-gradient(135deg,#272522,#1b1917 55%,#141311)}
+
+/* top bar */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(14,13,12,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:14px}
+.brand{font-family:var(--serif);font-size:21px;color:var(--gold2);letter-spacing:.03em}
+.nav{display:none;gap:28px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.nav a:hover{color:var(--gold2)}
+
+/* hero */
+.hero{overflow:hidden}
+.hero .wrap{display:grid}
+.photo{position:relative;margin:0 -20px}
+.photo .ph{aspect-ratio:3/4;border:0;border-radius:0}
+.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,var(--bg) 0%,rgba(14,13,12,.6) 32%,transparent 70%)}
+.hero-text{position:relative;margin-top:-150px;padding-bottom:60px}
+.hero h1{font-size:clamp(48px,12vw,88px);margin-top:14px}
+.hero h1 em{font-style:italic;color:var(--gold2)}
+.lead{color:var(--muted);max-width:44ch;margin-top:16px;font-size:16px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.corners{position:relative;padding:14px}
+.corners::before,.corners::after{content:"";position:absolute;width:56px;height:56px;border:1px solid var(--gold)}
+.corners::before{top:0;left:0;border-right:0;border-bottom:0}
+.corners::after{bottom:0;right:0;border-left:0;border-top:0}
+
+/* highlights */
+.stats{background:var(--bg2);border-block:1px solid var(--line)}
+.stats .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));text-align:center;padding:22px 0}
+.stat b{display:block;font-family:var(--serif);font-size:30px;font-weight:400;color:var(--gold2);line-height:1.1}
+.stat span{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+/* about */
+.about{padding:76px 0}
+.about .wrap{display:grid;gap:48px}
+.about .corners{width:min(100%,420px);margin-inline:auto}
+.about .ph{border-radius:var(--r)}
+.about h2{font-size:clamp(36px,8vw,54px);margin:12px 0 18px}
+.about h2 em{font-style:italic;color:var(--gold2)}
+.about p{color:var(--muted);margin-bottom:14px}
+.checks{list-style:none;margin-top:24px;display:grid;gap:10px}
+.checks li{display:flex;gap:12px;align-items:flex-start}
+.checks li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);margin-top:11px;flex:none}
+
+/* carousels */
+.services,.reviews{padding:76px 0;background:var(--bg2);border-block:1px solid var(--line)}
+.sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:10px 24px;margin-bottom:28px}
+.sec-head h2{font-size:clamp(36px,8vw,54px);margin-top:10px}
+.sec-head p{color:var(--muted);font-size:13px}
+.track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:20px;padding:6px 20px 22px;margin:0 -20px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.track::-webkit-scrollbar{display:none}
+.card{flex:0 0 min(76vw,320px);scroll-snap-align:start;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:border-color .3s}
+.card:hover{border-color:rgba(210,176,111,.5)}
+.card .ph{aspect-ratio:4/3;border:0;border-bottom:1px solid var(--line)}
+.card-body{padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:23px}
+.card p{color:var(--muted);font-size:13.5px;flex:1}
+.meta{display:flex;justify-content:space-between;align-items:baseline;margin-top:4px}
+.price{font-family:var(--serif);font-size:24px;color:var(--gold2)}
+.dur{font-size:12px;color:var(--muted);letter-spacing:.06em}
+.book{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--gold2);border-bottom:1px solid rgba(210,176,111,.5);align-self:flex-start;padding-bottom:3px;margin-top:6px}
+.dots{display:flex;gap:6px;justify-content:center;margin-top:6px}
+.dots i{width:6px;height:6px;border-radius:999px;background:#2f2a26;transition:all .3s}
+.dots i.on{background:var(--gold);width:20px}
+.review{flex:0 0 min(84vw,380px);scroll-snap-align:start;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column}
+.stars{display:flex;gap:3px;color:var(--gold);margin-bottom:14px}
+.stars svg{width:14px;height:14px;fill:currentColor}
+.review blockquote{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.45;flex:1;margin-bottom:20px}
+.review footer{display:flex;align-items:center;gap:12px;font-size:13px}
+.review footer b{font-weight:500;color:var(--ink)}
+.review footer span{color:var(--muted);font-size:12px}
+.avatar{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1b1507;display:grid;place-items:center;font-family:var(--serif);font-size:18px;flex:none}
+
+/* gallery */
+.gallery{padding:76px 0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.grid .ph{aspect-ratio:4/5;border-radius:10px}
+.ig{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
+.ig svg{width:18px;height:18px}
+
+/* contact */
+.contact{padding:80px 0 60px}
+.box{border:1px solid rgba(210,176,111,.35);background:radial-gradient(circle at 50% -20%,rgba(210,176,111,.22),transparent 55%),var(--bg2);border-radius:24px;padding:56px 26px;text-align:center}
+.box h2{font-size:clamp(38px,9vw,60px);margin:12px 0 14px}
+.box h2 em{font-style:italic;color:var(--gold2)}
+.box p{color:var(--muted);max-width:44ch;margin:0 auto 30px}
+.box .btn-gold{font-size:15px;padding:15px 26px}
+.info{display:grid;gap:26px;margin-top:44px;text-align:center}
+.info svg{width:22px;height:22px;color:var(--gold);margin:0 auto 8px}
+.info b{display:block;font-family:var(--serif);font-size:20px;font-weight:400}
+.info span{color:var(--muted);font-size:13px}
+footer.site{padding:26px 0 120px;text-align:center;color:var(--muted);font-size:12px;letter-spacing:.06em;border-top:1px solid var(--line)}
+
+/* floating "Book now" button */
+/* the only persistent booking button: bottom-right, inside the thumb zone and where visitors expect a chat button */
+.fab{position:fixed;right:16px;bottom:calc(18px + env(safe-area-inset-bottom));z-index:60;display:inline-flex;align-items:center;gap:10px;padding:16px 22px;border-radius:999px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1b1507;font-weight:600;font-size:14px;letter-spacing:.04em;box-shadow:0 14px 30px -10px rgba(210,176,111,.6);transition:transform .2s}
+.fab:hover{transform:translateY(-2px)}
+.fab svg{width:22px;height:22px;fill:currentColor}
+
+@media(min-width:900px){
+  .nav{display:flex}
+  .hero{padding:80px 0 90px}
+  .hero .wrap{grid-template-columns:1.05fr .95fr;align-items:center;gap:64px}
+  .photo{margin:0;order:2;width:min(100%,440px);margin-left:auto}
+  .photo::after{display:none}
+  .photo .ph{aspect-ratio:4/5;border-radius:var(--r);border:1px solid rgba(210,176,111,.25)}
+  .hero-text{margin-top:0;padding:0}
+  .about .wrap{grid-template-columns:1fr 1fr;align-items:center;gap:72px}
+  .about .corners{margin:0}
+  .track{margin:0;padding:6px 0 22px;scroll-padding-inline:0}
+  .card{flex-basis:300px}
+  .review{flex-basis:360px}
+  .grid{grid-template-columns:repeat(6,1fr);gap:12px}
+  .box{padding:84px 48px}
+  .info{grid-template-columns:repeat(3,1fr)}
+  footer.site{padding-bottom:40px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+img.ph{object-fit:cover;width:100%;height:auto}
+/* cover-up steps */
+.steps{padding:76px 0;border-bottom:1px solid var(--line)}
+.steps-grid{list-style:none;display:grid;gap:14px;margin-bottom:30px}
+.steps-grid li{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px 22px}
+.steps-grid span{font-family:var(--serif);font-size:30px;color:var(--gold2);display:block;line-height:1;margin-bottom:12px}
+.steps-grid b{display:block;font-weight:600;font-size:16px;margin-bottom:6px;color:var(--ink)}
+.steps-grid p{color:var(--muted);font-size:14px}
+.steps-grid li:nth-child(2){transition-delay:.12s}
+.steps-grid li:nth-child(3){transition-delay:.24s}
+/* soft reveal while scrolling */
+html.js [data-reveal]{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}
+html.js [data-reveal].in{opacity:1;transform:none}
+@media(min-width:900px){.steps-grid{grid-template-columns:repeat(3,1fr);gap:18px}}
+@media(prefers-reduced-motion:reduce){html.js [data-reveal]{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<svg style="display:none" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></symbol>
+  <symbol id="i-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.3-6-11a6 6 0 0 1 12 0c0 5.7-6 11-6 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top">Fariba Fallah</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#about">About</a><a href="#services">Services</a><a href="#cover-up">Cover-up</a><a href="#reviews">Reviews</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div class="photo"><img class="ph" src="photos/portrait.jpg" alt="Fariba Fallah, permanent makeup artist"></div>
+    <div class="hero-text">
+      <p class="eyebrow">Permanent Makeup Artist · Dubai</p>
+      <h1>Fariba <em>Fallah</em></h1>
+      <p class="lead">Refined permanent makeup in a private studio. Microblading, lip blush and cover-ups, with precision, discretion and results that speak for themselves.</p>
+      <div class="cta">
+        <a class="btn btn-gold" data-wa href="#"><svg><use href="#i-wa"/></svg>Book on WhatsApp</a>
+        <a class="btn btn-outline" href="#services">Services & prices</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats" aria-label="Highlights" id="stats">
+  <div class="wrap" id="stats-wrap"></div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="corners" data-reveal><img class="ph" src="photos/about-1.jpg" alt="Fariba at work"></div>
+    <div data-reveal>
+      <p class="eyebrow">About</p>
+      <h2>Beauty, <em>refined.</em></h2>
+      <p>Hello, I'm Fariba, a permanent makeup artist in Dubai Media City. I help women feel confident in their own face with treatments that enhance what is already there rather than hide it.</p>
+      <p>I specialise in microblading, powder brows, lip blush and the cover-up of old tattooed brows. I work one-on-one in a calm, private studio, and every result is drawn on and approved by you before we start.</p>
+      <ul class="checks">
+        <li>Single-use needles and strict hygiene</li>
+        <li>Consultation and pre-drawing before every treatment</li>
+        <li>Natural results, with full aftercare guidance</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <div><p class="eyebrow">Menu</p><h2>Services & prices</h2></div>
+      <p>Swipe to explore · tap a treatment to book it</p>
+    </div>
+    <div class="track" id="services-track" aria-label="Services"></div>
+    <div class="dots" id="services-dots" aria-hidden="true"></div>
+  </div>
+</section>
+
+<section class="steps" id="cover-up">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <div><p class="eyebrow">Old tattoo brows?</p><h2>Cover-up, <em>step by step</em></h2></div>
+      <p>No laser · no removal · photo check first</p>
+    </div>
+    <ol class="steps-grid">
+      <li data-reveal><span>01</span><b>Send a photo</b><p>Message me a clear photo of your brows on WhatsApp, in daylight and without makeup.</p></li>
+      <li data-reveal><span>02</span><b>Photo check</b><p>I tell you honestly what is possible, which technique suits your skin and confirm the price before you book.</p></li>
+      <li data-reveal><span>03</span><b>We book</b><p>Your session in my private studio in Dubai Media City, with free parking and full aftercare guidance.</p></li>
+    </ol>
+    <a class="btn btn-gold" data-wa data-wa-msg="Hello Fariba, I would like a cover-up of my old brows. Here is a photo:" href="#"><svg><use href="#i-wa"/></svg>Send a photo on WhatsApp</a>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <div><p class="eyebrow">Portfolio</p><h2>Recent work</h2></div>
+      <a class="ig" data-ig href="#"><svg><use href="#i-ig"/></svg><span data-ig-handle>@fariba.fallahpmu</span></a>
+    </div>
+    <div class="grid" data-reveal>
+      <img class="ph" src="photos/before-after-1.jpg" alt="Before and after: microblading" loading="lazy">
+      <img class="ph" src="photos/before-after-2.jpg" alt="Before and after: powder brows" loading="lazy">
+      <img class="ph" src="photos/brows-lips.jpg" alt="Healed brows and lip blush" loading="lazy">
+      <img class="ph" src="photos/lash-lift.jpg" alt="Lash lift" loading="lazy">
+      <img class="ph" src="photos/brow-lamination.jpg" alt="Brow lamination" loading="lazy">
+      <img class="ph" src="photos/lash-lift-2.jpg" alt="Lash lift and brow lamination" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="sec-head" data-reveal>
+      <div><p class="eyebrow">Testimonials</p><h2>Kind words</h2></div>
+      <p>From clients on Instagram and Google</p>
+    </div>
+    <div class="track" id="reviews-track" aria-label="Client reviews"></div>
+    <div class="dots" id="reviews-dots" aria-hidden="true"></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="box" data-reveal>
+      <p class="eyebrow">Appointments</p>
+      <h2>Book your <em>moment</em></h2>
+      <p>Send me a message on WhatsApp with the treatment you would like and your preferred day, or a photo of your brows if you are thinking about a cover-up. I reply personally.</p>
+      <a class="btn btn-gold" data-wa href="#"><svg><use href="#i-wa"/></svg>Book on WhatsApp</a>
+    </div>
+    <div class="info">
+      <div data-reveal><svg><use href="#i-pin"/></svg><b>Private studio</b><span>Dubai Media City · free parking · by appointment only</span></div>
+      <div data-reveal><svg><use href="#i-clock"/></svg><b>Appointments</b><span>By appointment only · booking on WhatsApp</span></div>
+      <div data-reveal><svg><use href="#i-ig"/></svg><b>Instagram</b><a data-ig href="#"><span data-ig-handle>@fariba.fallahpmu</span></a></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site"><div class="wrap">© <span id="year"></span> Fariba Fallah · All rights reserved</div></footer>
+
+<a class="fab" data-wa href="#" aria-label="Book now on WhatsApp"><svg><use href="#i-wa"/></svg><span>Book now</span></a>
+
+<script>
+/* ========= EDIT YOUR CONTENT HERE ========= */
+const SITE = {
+  whatsapp: "41790000000",            // your number in international format, digits only (no +, no spaces)
+  whatsappMessage: "Hello Fariba, I would like to book an appointment.",
+  instagram: "fariba.fallahpmu",         // your Instagram handle without @
+  services: [
+    // price: what is shown in gold. duration: shown small next to it, leave "" to hide it.
+    { name: "Microblading", desc: "Hair-stroke brows drawn one by one for a natural, feathered result.", duration: "", price: "price on request", img: "photos/microblading.jpg" },
+    { name: "Powder brows", desc: "Soft, shaded brows with a light makeup finish that suits every skin type.", duration: "", price: "price on request", img: "photos/powder-brows.jpg" },
+    { name: "Lip blush", desc: "A natural tint that defines the lip line and evens out the colour.", duration: "", price: "price on request", img: "photos/lip-blush.jpg" },
+    { name: "Cover-up of old tattoo brows", desc: "Old or faded tattooed brows corrected and covered. No laser, no removal: send a photo first, then we book.", duration: "", price: "1,800 AED", img: "photos/cover-up.jpg", cta: "Send a photo on WhatsApp", msg: "Hello Fariba, I would like a cover-up of my old brows. Here is a photo:" },
+    { name: "Lash lift & tint", desc: "Your own lashes, lifted and tinted for six to eight weeks.", duration: "", price: "price on request", img: "photos/lash-lift.jpg" },
+    { name: "Brow lamination", desc: "Fuller, perfectly set brows with a shape tailored to your face.", duration: "", price: "price on request", img: "photos/brow-lamination.jpg" }
+  ],
+  // Highlights row under the main photo. Empty = hidden. Example of the format:
+  // facts: [{ big: "8+", label: "Years" }, { big: "1,200+", label: "Happy clients" }, { big: "5.0", label: "Average rating" }],
+  facts: [],
+  // Real client reviews. Empty = the whole reviews section is hidden. Example of the format:
+  // { name: "Sarah M.", text: "My brows have never looked this natural.", source: "Instagram" },
+  reviews: []
+};
+/* ========================================== */
+
+const waLink = m => "https://wa.me/" + SITE.whatsapp + "?text=" + encodeURIComponent(m || SITE.whatsappMessage);
+document.querySelectorAll("[data-wa]").forEach(a => { a.href = waLink(a.dataset.waMsg); a.target = "_blank"; a.rel = "noopener"; });
+document.querySelectorAll("[data-ig]").forEach(a => { a.href = "https://instagram.com/" + SITE.instagram; a.target = "_blank"; a.rel = "noopener"; });
+document.querySelectorAll("[data-ig-handle]").forEach(el => el.textContent = "@" + SITE.instagram);
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const ph = (label, v, img, pos) => img
+  ? '<img class="ph" src="' + img + '" alt="' + label + '" loading="lazy"' + (pos ? ' style="object-position:' + pos + '"' : '') + '>'
+  : '<div class="ph ' + (v || "") + '"><div><svg><use href="#i-cam"/></svg><span>' + label + '</span></div></div>';
+const star = '<svg><use href="#i-star"/></svg>';
+
+document.getElementById("services-track").innerHTML = SITE.services.map((s, i) =>
+  '<article class="card">' + ph(s.name, "v" + (i % 3 + 1), s.img, s.pos) +
+  '<div class="card-body"><h3>' + s.name + '</h3><p>' + s.desc + '</p>' +
+  '<div class="meta"><span class="price">' + s.price + '</span>' + (s.duration ? '<span class="dur">' + s.duration + '</span>' : '') + '</div>' +
+  '<a class="book" href="' + waLink(s.msg || ("Hello Fariba, I would like to book: " + s.name + ".")) + '" target="_blank" rel="noopener">' + (s.cta || "Book this treatment") + '</a></div></article>'
+).join("");
+
+const statsWrap = document.getElementById("stats-wrap");
+if (SITE.facts.length) statsWrap.innerHTML = SITE.facts.map(f => '<div class="stat"><b>' + f.big + '</b><span>' + f.label + '</span></div>').join("");
+else document.getElementById("stats").hidden = true;
+
+if (!SITE.reviews.length) {
+  document.getElementById("reviews").hidden = true;
+  const navLink = document.querySelector('.nav a[href="#reviews"]'); if (navLink) navLink.remove();
+}
+document.getElementById("reviews-track").innerHTML = SITE.reviews.map(r =>
+  '<article class="review"><div class="stars" aria-label="5 out of 5 stars">' + star.repeat(5) + '</div>' +
+  '<blockquote>“' + r.text + '”</blockquote>' +
+  '<footer><div class="avatar">' + r.name.charAt(0) + '</div><div><b>' + r.name + '</b><br><span>via ' + r.source + '</span></div></footer></article>'
+).join("");
+
+/* auto-moving carousel: advances by itself, pauses while you touch or hover, loops back to the start */
+function carousel(track, dots, every) {
+  const items = Array.from(track.children);
+  if (!items.length) return;
+  const step = () => items[0].getBoundingClientRect().width + (parseFloat(getComputedStyle(track).columnGap) || 0);
+  if (dots) dots.innerHTML = items.map(() => "<i></i>").join("");
+  const mark = () => {
+    if (!dots) return;
+    const i = Math.min(items.length - 1, Math.round(track.scrollLeft / step()));
+    Array.from(dots.children).forEach((d, k) => d.classList.toggle("on", k === i));
+  };
+  mark();
+  let raf = false;
+  track.addEventListener("scroll", () => { if (raf) return; raf = true; requestAnimationFrame(() => { mark(); raf = false; }); }, { passive: true });
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  let paused = false, timer;
+  const pause = () => { paused = true; clearTimeout(timer); };
+  const resume = () => { clearTimeout(timer); timer = setTimeout(() => { paused = false; }, 6000); };
+  ["pointerdown", "touchstart"].forEach(e => track.addEventListener(e, pause, { passive: true }));
+  ["pointerup", "pointercancel", "touchend"].forEach(e => track.addEventListener(e, resume, { passive: true }));
+  if (matchMedia("(hover: hover)").matches) { track.addEventListener("mouseenter", pause); track.addEventListener("mouseleave", resume); }
+  setInterval(() => {
+    if (paused || document.hidden) return;
+    const max = track.scrollWidth - track.clientWidth;
+    if (track.scrollLeft >= max - 4) track.scrollTo({ left: 0, behavior: "smooth" });
+    else track.scrollBy({ left: step(), behavior: "smooth" });
+  }, every);
+}
+carousel(document.getElementById("services-track"), document.getElementById("services-dots"), 3500);
+carousel(document.getElementById("reviews-track"), document.getElementById("reviews-dots"), 4500);
+
+/* soft reveal of blocks as they scroll into view */
+if ("IntersectionObserver" in window) {
+  document.documentElement.classList.add("js");
+  const io = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -8% 0px" });
+  document.querySelectorAll("[data-reveal]").forEach(el => io.observe(el));
+}
+</script>
+</body>
+</html>
