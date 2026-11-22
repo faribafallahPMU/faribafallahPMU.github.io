@@ -61,10 +61,6 @@ section,article{scroll-margin-top:72px}
 .quick a{color:var(--gold2);border-bottom:1px solid rgba(210,176,111,.4);padding-bottom:3px}
 
 /* highlights */
-.stats{background:var(--bg2);border-block:1px solid var(--line)}
-.stats .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));text-align:center;padding:22px 0}
-.stat b{display:block;font-family:var(--serif);font-size:clamp(24px,7vw,30px);white-space:nowrap;font-weight:400;color:var(--gold2);line-height:1.1}
-.stat span{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 
 /* about */
 .about{padding:76px 0}
@@ -85,12 +81,9 @@ section,article{scroll-margin-top:72px}
 .sig{font-family:var(--script);font-size:46px;line-height:1;color:var(--gold2);margin-top:4px}
 
 /* service categories */
-.cat{padding:72px 0 44px;border-top:1px solid var(--line)}
-.cat.alt{background:var(--bg2)}
-.cat-head{text-align:center;max-width:62ch;margin:0 auto 36px}
-.cat-head h2{font-size:clamp(42px,10vw,64px);margin-top:10px}
-.cat-head p{color:var(--muted);margin-top:10px}
-.svc{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px 0;margin-bottom:26px;overflow:hidden}
+#categories{padding:10px 0 36px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px 0;margin-bottom:16px;overflow:hidden}
 .svc-head,.svc-body,.gcap{padding-inline:22px}
 .svc h3{font-size:clamp(28px,6.5vw,36px)}
 .svc .lead{margin-top:8px;font-size:15.5px}
@@ -143,15 +136,11 @@ section,article{scroll-margin-top:72px}
 .note{text-align:center;color:var(--muted);font-size:13px;margin-top:20px}
 
 /* how to book */
-.steps{padding:76px 0;border-bottom:1px solid var(--line)}
-.steps-grid{list-style:none;display:grid;gap:14px;margin-bottom:30px}
+.steps-grid{list-style:none;display:grid;gap:12px;margin:0 0 30px;text-align:left}
 .steps-grid li{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:24px 22px}
 .steps-grid span{font-family:var(--serif);font-size:30px;color:var(--gold2);display:block;line-height:1;margin-bottom:12px}
 .steps-grid b{display:block;font-weight:600;font-size:16px;margin-bottom:6px;color:var(--ink)}
 .steps-grid p{color:var(--muted);font-size:14px}
-.steps-grid li:nth-child(2){transition-delay:.12s}
-.steps-grid li:nth-child(3){transition-delay:.24s}
-.steps .center{text-align:center}
 
 /* aftercare */
 .aftercare{padding:76px 0;background:var(--bg2);border-bottom:1px solid var(--line)}
@@ -180,16 +169,16 @@ details li b{display:block;color:var(--ink);font-weight:500}
 .avatar{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1b1507;display:grid;place-items:center;font-family:var(--serif);font-size:18px;flex:none}
 
 /* contact */
-.contact{padding:80px 0 60px}
-.box{border:1px solid rgba(210,176,111,.35);background:radial-gradient(circle at 50% -20%,rgba(210,176,111,.22),transparent 55%),var(--bg2);border-radius:24px;padding:56px 26px;text-align:center}
+.contact{padding:64px 0 60px}
+.box{border:1px solid rgba(210,176,111,.35);background:radial-gradient(circle at 50% -20%,rgba(210,176,111,.22),transparent 55%),var(--bg2);border-radius:24px;padding:48px 18px;text-align:center}
 .box h2{font-size:clamp(38px,9vw,60px);margin:12px 0 14px}
 .box h2 em{font-style:italic;color:var(--gold2)}
-.box p{color:var(--muted);max-width:44ch;margin:0 auto 30px}
+.box>p{color:var(--muted);max-width:44ch;margin:0 auto 28px}
 .box .btn-wa{font-size:15px;padding:15px 26px}
-.info{display:grid;gap:26px;margin-top:44px;text-align:center}
+.info{display:grid;gap:26px;margin-top:44px;text-align:center;align-items:start}
 .info svg{width:22px;height:22px;color:var(--gold);margin:0 auto 8px}
 .info b{display:block;font-family:var(--serif);font-size:20px;font-weight:400}
-.info span{color:var(--muted);font-size:13px}
+.info span{color:var(--muted);font-size:13px;white-space:nowrap}
 .info a.u{border-bottom:1px solid rgba(210,176,111,.5)}
 footer.site{padding:26px 0 120px;text-align:center;color:var(--muted);font-size:12px;letter-spacing:.06em;border-top:1px solid var(--line)}
 
@@ -212,7 +201,7 @@ html.js [data-reveal].in{opacity:1;transform:none}
   .hero-text{margin-top:0;padding:0}
   .about .wrap{grid-template-columns:1fr 1fr;align-items:center;gap:72px}
   .corners{margin:0}
-  .cat{padding:90px 0 60px}
+  #categories{padding:16px 0 56px}
   .svc{padding:32px 0}
   .svc-head,.svc-body,.gcap{padding-inline:32px}
   .strip{padding-inline:32px;scroll-padding-inline:32px}
@@ -223,7 +212,7 @@ html.js [data-reveal].in{opacity:1;transform:none}
   .steps-grid{grid-template-columns:repeat(3,1fr);gap:18px}
   .review{flex-basis:360px}
   .track{margin:0;padding:6px 0 22px;scroll-padding-inline:0}
-  .box{padding:84px 48px}
+  .box{padding:64px 48px}
   .info{grid-template-columns:repeat(4,1fr)}
   footer.site{padding-bottom:40px}
 }
@@ -262,10 +251,6 @@ html.js [data-reveal].in{opacity:1;transform:none}
   </div>
 </section>
 
-<section class="stats" aria-label="Highlights" id="stats">
-  <div class="wrap" id="stats-wrap"></div>
-</section>
-
 <section class="about" id="about">
   <div class="wrap">
     <div class="corners" data-reveal><img src="photos/about-1.jpg" alt="Fariba Fallah at work" loading="lazy"></div>
@@ -289,23 +274,11 @@ html.js [data-reveal].in{opacity:1;transform:none}
 
 <section class="prices" id="prices">
   <div class="wrap">
-    <div class="sec-head" data-reveal><p class="eyebrow">Price list</p><h2>Prices, <em>by category</em></h2><p>Tap a service to book it on WhatsApp</p></div>
+    <div class="sec-head" data-reveal><h2>Prices</h2></div>
     <div class="sheet" data-reveal>
       <div class="cols" id="price-cols"></div>
       <p class="note" id="price-note"></p>
     </div>
-  </div>
-</section>
-
-<section class="steps" id="booking">
-  <div class="wrap">
-    <div class="sec-head" data-reveal><p class="eyebrow">Appointments</p><h2>How to <em>book</em></h2></div>
-    <ol class="steps-grid">
-      <li data-reveal><span>01</span><b>Message me</b><p>On WhatsApp, tell me which service you'd like. For a cover-up, add a photo of your brows.</p></li>
-      <li data-reveal><span>02</span><b>Choose your time</b><p>Monday to Saturday, between 10:00 and 19:00. Free parking at the studio.</p></li>
-      <li data-reveal><span>03</span><b>Your session</b><p>We design the shape together first, so it suits your face. Then I take my time.</p></li>
-    </ol>
-    <p class="center"><a class="btn btn-wa" data-wa href="#"><svg><use href="#i-wa"/></svg>Book on WhatsApp</a></p>
   </div>
 </section>
 
@@ -356,14 +329,19 @@ html.js [data-reveal].in{opacity:1;transform:none}
     <div class="box" data-reveal>
       <p class="eyebrow">Appointments</p>
       <h2>Book your <em>moment</em></h2>
-      <p>Send me a message on WhatsApp with the treatment you would like and your preferred day, or a photo of your brows if you are thinking about a cover-up. I reply personally.</p>
+      <p>Three simple steps. I reply to every message personally.</p>
+      <ol class="steps-grid">
+        <li><span>01</span><b>Message me</b><p>On WhatsApp, tell me which service you'd like. For a cover-up, add a photo of your brows.</p></li>
+        <li><span>02</span><b>Choose your time</b><p>Monday to Saturday, between 10:00 and 19:00. Free parking at the studio.</p></li>
+        <li><span>03</span><b>Your session</b><p>We design the shape together first, so it suits your face. Then I take my time.</p></li>
+      </ol>
       <a class="btn btn-wa" data-wa href="#"><svg><use href="#i-wa"/></svg>Book on WhatsApp</a>
     </div>
     <div class="info">
-      <div data-reveal><svg><use href="#i-pin"/></svg><b>Dubai Media City</b><span>Private studio · free parking</span></div>
-      <div data-reveal><svg><use href="#i-clock"/></svg><b>Hours</b><span>Monday to Saturday · 10:00 – 19:00</span></div>
-      <div data-reveal><svg><use href="#i-phone"/></svg><b>WhatsApp</b><a class="u" data-wa href="#"><span>050 648 2550</span></a></div>
-      <div data-reveal><svg><use href="#i-ig"/></svg><b>Instagram</b><a class="u" data-ig href="#"><span data-ig-handle>@fariba.fallahpmu</span></a><br><span>More of my work and client reviews</span></div>
+      <div data-reveal><svg><use href="#i-pin"/></svg><b>Studio</b><span>Dubai Media City · free parking</span></div>
+      <div data-reveal><svg><use href="#i-clock"/></svg><b>Hours</b><span>Mon – Sat · 10:00 – 19:00</span></div>
+      <div data-reveal><svg><use href="#i-phone"/></svg><b>WhatsApp</b><a class="u" data-wa href="#"><span>+971 50 648 2550</span></a></div>
+      <div data-reveal><svg><use href="#i-ig"/></svg><b>Instagram</b><a class="u" data-ig href="#"><span data-ig-handle>@fariba.fallahpmu</span></a></div>
     </div>
   </div>
 </section>
@@ -387,12 +365,6 @@ const SITE = {
   whatsapp: "971506482550",
   whatsappMessage: "Hi Fariba! I'd like to book an appointment",
   instagram: "fariba.fallahpmu",
-  // Highlights row under the main photo. Empty = hidden.
-  facts: [
-    { big: "7", label: "Years of experience" },
-    { big: "1–1.5", label: "Years the results last" },
-    { big: "10–19", label: "Monday to Saturday" }
-  ],
   // Real client reviews. Empty = the whole reviews section is hidden. Format: { name: "Sarah M.", text: "…", source: "Instagram" }
   reviews: [],
   // Service categories, in the order shown on the page. Each service: name, lead, photos (its folder in carousel/),
@@ -483,7 +455,7 @@ const SITE = {
           price: { amount: "AED 350", note: "Lash lift & lamination" },
           book: { label: "Book lash lift", msg: "Hi! I want to book lash lift and lamination" } }
       ] },
-    { id: "extras", title: "Extras", intro: "Small touches, placed exactly where you'd like them.",
+    { id: "other", title: "Other", intro: "Small touches, placed exactly where you'd like them.",
       services: [
         { id: "beauty-spot", name: "Beauty spot", lead: "A small, natural-looking beauty spot.",
           photos: "carousel/beauty-spot",
@@ -507,7 +479,7 @@ const SITE = {
       { name: "Lash line enhancement", price: "1,200", msg: "Hi! I want to book lash line enhancement" },
       { name: "Lower lash line enhancement", price: "1,200", msg: "Hi! I want to book lower lash line enhancement" },
       { name: "Lash lift & lamination", price: "350", msg: "Hi! I want to book lash lift and lamination" } ] },
-    { group: "Extras", items: [
+    { group: "Other", items: [
       { name: "Beauty spot", price: "100", msg: "Hi! I want to book a beauty spot" } ] }
   ],
   priceNote: "All prices in AED. Touch-up within one month of your session: AED 100."
@@ -522,8 +494,6 @@ document.querySelectorAll("[data-ig-handle]").forEach(el => el.textContent = "@"
 document.getElementById("year").textContent = new Date().getFullYear();
 
 /* highlights */
-if (SITE.facts.length) document.getElementById("stats-wrap").innerHTML = SITE.facts.map(f => '<div class="stat"><b>' + f.big + '</b><span>' + f.label + '</span></div>').join("");
-else document.getElementById("stats").hidden = true;
 
 /* services, by category */
 function serviceHTML(s) {
@@ -539,8 +509,7 @@ function serviceHTML(s) {
     strip + '<div class="svc-body">' + sub + swatch + paras + (pts ? '<div class="pts">' + pts + '</div>' : '') + notice + foot + '</div></article>';
 }
 document.getElementById("categories").innerHTML = SITE.categories.map((c, i) =>
-  '<section class="cat' + (i % 2 ? ' alt' : '') + '" id="' + c.id + '"><div class="wrap">' +
-  '<div class="cat-head" data-reveal><p class="eyebrow">Category · 0' + (i + 1) + '</p><h2>' + c.title + '</h2><p>' + c.intro + '</p></div>' +
+  '<section class="cat" id="' + c.id + '"><div class="wrap"><h2 class="sr-only">' + c.title + '</h2>' +
   c.services.map(serviceHTML).join("") + '</div></section>').join("");
 
 /* price list */
@@ -593,7 +562,9 @@ function carousel(track, dots, every) {
 }
 /* each carousel shows the photos of its folder: 1.jpg, 2.jpg, 3.jpg ... in that order (add 8.jpg to add a photo).
    Eight numbers are checked at the same time and the photos appear as soon as they are found. */
-const exists = url => fetch(url, { method: "HEAD" }).then(r => r.ok).catch(() => false);
+const exists = location.protocol === "file:"
+  ? url => new Promise(ok => { const im = new Image(); im.onload = () => ok(true); im.onerror = () => ok(false); im.src = url; })   // opened from the folder (website.html)
+  : url => fetch(url, { method: "HEAD" }).then(r => r.ok).catch(() => false);
 document.querySelectorAll(".strip-wrap[data-folder]").forEach(async wrap => {
   const folder = wrap.dataset.folder, strip = wrap.querySelector(".strip");
   const fig = (f, i) => '<figure><img src="' + f + '" alt="' + wrap.dataset.name + ', photo ' + (i + 1) + '" loading="lazy"></figure>';
