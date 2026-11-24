@@ -8,6 +8,7 @@ aftercare, and a floating **Book now** button that opens WhatsApp.
 
 | Folder / file | What it is |
 |---|---|
+| `website.html` | Double-click it to open the site from this folder, exactly as it will look online (not published) |
 | `index.html` | **The website** (Dark Luxe design, chosen on 22 Nov 2026), live at https://faribafallahpmu.github.io. This single file plus the `photos` folder is everything that is online. |
 | `templates/` | The three original proposals (Ivory & Gold, Modern Minimal, Dark Luxe), kept for reference |
 | `previews/` | Full-page screenshots: `index-mobile.png` and `index-desktop.png` are the site, the others are the old proposals |
@@ -64,3 +65,15 @@ One-time key setup (optional, run in the terminal, then add the printed line to 
 ```
 mkdir -p ~/.ssh && chmod 700 ~/.ssh && ssh-keygen -t ed25519 -N "" -C "fariba-website" -f ~/.ssh/id_ed25519_github && printf '\nHost github.com\n  IdentityFile ~/.ssh/id_ed25519_github\n  IdentitiesOnly yes\n' >> ~/.ssh/config && ssh-keyscan -t ed25519 github.com >> ~/.ssh/known_hosts 2>/dev/null && cat ~/.ssh/id_ed25519_github.pub
 ```
+
+## Security and privacy (checked 24 Nov 2026)
+
+- The site is static: no forms, no login, no cookies, no database. Nothing to hack on the page itself; the only
+  way to change it is the GitHub account, so keep two-factor authentication on that account.
+- Public files contain no key, password, e-mail address, salon name or GPS coordinate; the only contact data is the
+  WhatsApp number and the Instagram handle, on purpose.
+- The photos online carry no camera, date or location metadata (they were re-exported before upload).
+- The only outside service the page talks to is Google Fonts. Visit statistics (Umami or Google Analytics) load
+  only when an ID is filled in `SITE.analytics` in `index.html`.
+- Client photos: make sure every client whose face is visible agreed to appear on the site.
+- `Added from fariba/`, `website.html` and this folder's working files are never uploaded.

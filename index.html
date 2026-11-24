@@ -365,6 +365,9 @@ const SITE = {
   whatsapp: "971506482550",
   whatsappMessage: "Hi Fariba! I'd like to book an appointment ✨",
   instagram: "fariba.fallahpmu",
+  // Visits and WhatsApp clicks. Both empty = nothing is loaded. Fill ONE of them and the counting starts:
+  // umami: the "Website ID" from cloud.umami.is (free, no cookies) · ga4: the "Measurement ID" from Google Analytics, like "G-XXXXXXXXXX"
+  analytics: { umami: "278d686d-1370-49c8-b882-20dd65930c88", ga4: "" },
   // Real client reviews. Empty = the whole reviews section is hidden. Format: { name: "Sarah M.", text: "…", source: "Instagram" }
   reviews: [],
   // Service categories, in the order shown on the page. Each service: name, lead, photos (its folder in carousel/),
@@ -598,6 +601,21 @@ document.querySelectorAll(".strip-wrap[data-sources]").forEach(async wrap => {
   carousel(strip, wrap.querySelector(".dots"), 4200);
 });
 carousel(document.getElementById("reviews-track"), document.getElementById("reviews-dots"), 4500);
+
+/* visits and WhatsApp clicks: loaded only when an ID is filled in SITE.analytics */
+const an = SITE.analytics || {};
+if (an.umami) { const sc = document.createElement("script"); sc.defer = true; sc.src = "https://cloud.umami.is/script.js"; sc.dataset.websiteId = an.umami; document.head.appendChild(sc); }
+if (an.ga4) {
+  const sc = document.createElement("script"); sc.async = true; sc.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(an.ga4); document.head.appendChild(sc);
+  window.dataLayer = window.dataLayer || []; window.gtag = function () { dataLayer.push(arguments); }; gtag("js", new Date()); gtag("config", an.ga4);
+}
+if (an.umami || an.ga4) document.addEventListener("click", e => {
+  const a = e.target.closest('a[href^="https://wa.me/"]'); if (!a) return;
+  const svc = a.closest(".svc"), row = a.closest(".row");
+  const from = svc ? svc.id : row ? row.querySelector(".nm").textContent.trim() : a.classList.contains("fab") ? "floating button" : a.closest("#contact") ? "booking block" : "page";
+  if (window.umami) umami.track("whatsapp-click", { from });
+  if (window.gtag && an.ga4) gtag("event", "whatsapp_click", { from });
+});
 
 /* soft reveal of blocks as they scroll into view */
 if ("IntersectionObserver" in window) {
